@@ -6,16 +6,17 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "6"
-  known_variants_covered = "37"
+  version = "7"
+  known_variants_covered = "39"
   date_created = "17-Mar-2020"
-  last_updated = "25-Mar-2020"
+  last_updated = "27-Mar-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
   change_log_23Mar2020 = "added: 1 url, 6 filenames, 4 subject lines"
   change_log_24Mar2020 = "added: 6 urls, 3 filenames, 3 subject lines"
   change_log_25Mar2020 = "added: 2 email addresses, 29 urls, 5 filenames, 5 subject lines"
+  change_log_27Mar2020 = "added: 7 urls"
 
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -120,6 +121,13 @@ strings:
   $url87="https://goldenlion.sg/blacky2/QcxbDp400Ajfdiy.exe" nocase
   $url88="http://mecharnise.ir/ca17/ca17.exe" nocase
   $url89="https://jstforyou.com/agenda.zip" nocase
+  $url90="https://sway.office.com/UFXILme8nBQCIZzj?ref=Link" nocase
+  $url91="https://gboexprodutos.com.br/Scb/file/office/index.php" nocase
+  $url92="https://gboexprodutos.com.br/Scb/file/invoice.php" nocase
+  $url93="https://pec-india.com/COVID19/file/office/login.php" nocase
+  $url94="https://sway.office.com/1y5EtcvtDkyFBKm6?ref=Link" nocase
+  $url95="https://pec-india.com/COVID19/file/invoice.php" nocase
+  $url96="https://pec-india.com/COVID19/file/office/index.php" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
