@@ -6,10 +6,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "7"
-  known_variants_covered = "39"
+  version = "8"
+  known_variants_covered = "45"
   date_created = "17-Mar-2020"
-  last_updated = "27-Mar-2020"
+  last_updated = "30-Mar-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -17,6 +17,7 @@ meta:
   change_log_24Mar2020 = "added: 6 urls, 3 filenames, 3 subject lines"
   change_log_25Mar2020 = "added: 2 email addresses, 29 urls, 5 filenames, 5 subject lines"
   change_log_27Mar2020 = "added: 7 urls"
+  change_log_30Mar2020 = "added: 1 email address, 5 urls, 7 filenames, 7 subject lines"
 
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -31,7 +32,8 @@ strings:
   $email7="ricardo.ospina@bnb-spa.com" nocase	
   $email8="agarrard@protonmail.com" nocase
   $email9="mercylogs7@yandex.com" nocase
-
+  $email10="mercylogs7@yandex.com" nocase
+  
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
   $url3="http://onlinepreneur.id/license/love.exe" nocase
@@ -128,6 +130,11 @@ strings:
   $url94="https://sway.office.com/1y5EtcvtDkyFBKm6?ref=Link" nocase
   $url95="https://pec-india.com/COVID19/file/invoice.php" nocase
   $url96="https://pec-india.com/COVID19/file/office/index.php" nocase
+  $url97="https://drive.google.com/uc?export=download&id=169KtCYiDPkOQGQaPD_OFZaRgk0fdF988" nocase
+  $url98="http://old-tosu-9221.verse.jp/Img/CIC.exe" nocase
+  $url99="http://t.info.samsungusa.com/r/?id=hesy2fd4,77c0c34,339a477f&p1=project0980870.blob.core.windows.net/ronaupdate0987654/Ap3dX.html" nocase
+  $url100="https://transtman.blob.core.windows.net/activemansmile/117-Crl.html" nocase
+  $url101="http://www.tanikawashuntaro.com//cgi-bin//g46445/9876778.php" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -164,6 +171,13 @@ strings:
   $filename34="Sample Products.xlsx" nocase
   $filename35="Covid-19 Immunity Diet Tips.pdf.exe" nocase
   $filename36="Covid-19 Immunity Diet Tips.pdf.zip" nocase
+  $filename37="EmergencyContact.xlsm" nocase
+  $filename38="Mask 2020.rar" nocase
+  $filename39="Mask 2020.exe" nocase
+  $filename40="Covid-19 Immunity Diet Tips.pdf.zip" nocase
+  $filename41="Covid-19 Immunity Diet Tips.pdf.exe" nocase
+  $filename42="COVID 19.xlsx" nocase
+  $filename43="COVID_19 Patient_Update_120216 am-pdf.html" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -204,6 +218,14 @@ strings:
   $subject37="Information about Covid- 19 Actions" nocase
   $subject38="COVID-19 Supplies (Masks, Gloves, & other products)" nocase
   $subject39="RE: Covid19\" Latest Tips to stay Immune to Virus !!" nocase
+  $subject40="COVID-19 CONTACT" nocase
+  $subject41="RE:FREE FACE MASK" nocase
+  $subject42="FREE FACE MASK" nocase
+  $subject43="Reply: New tender 2020" nocase
+  $subject44="You missed a call for COVID-19 Update" nocase
+  $subject45="CORONA Virus Update on our Premises ID:1918 Friday 03/27/2020" nocase
+  $subject46="FW: CORONA Virus Update on our Premises ID:1918 Friday 03/27/2020" nocase
+  
   
   condition:
     any of them
