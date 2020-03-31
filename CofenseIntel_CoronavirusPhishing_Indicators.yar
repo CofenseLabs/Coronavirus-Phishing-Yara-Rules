@@ -6,10 +6,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "8"
-  known_variants_covered = "45"
+  version = "9"
+  known_variants_covered = "55"
   date_created = "17-Mar-2020"
-  last_updated = "30-Mar-2020"
+  last_updated = "31-Mar-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -18,11 +18,13 @@ meta:
   change_log_25Mar2020 = "added: 2 email addresses, 29 urls, 5 filenames, 5 subject lines"
   change_log_27Mar2020 = "added: 7 urls"
   change_log_30Mar2020 = "added: 1 email address, 5 urls, 7 filenames, 7 subject lines"
+  change_log_31Mar2020 = "added: 18 urls, 5 filenames, 6 subject lines"
 
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
   $domain3="seasonsnonaco.ddnsking.com" nocase
+
   $email1="zakir@perfectfashion-bd.com" nocase
   $email2="postmaster@mallinckrodt.xyz" nocase
   $email3="brentpaul403@yandex.ru" nocase
@@ -32,8 +34,7 @@ strings:
   $email7="ricardo.ospina@bnb-spa.com" nocase	
   $email8="agarrard@protonmail.com" nocase
   $email9="mercylogs7@yandex.com" nocase
-  $email10="mercylogs7@yandex.com" nocase
-  
+
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
   $url3="http://onlinepreneur.id/license/love.exe" nocase
@@ -135,6 +136,24 @@ strings:
   $url99="http://t.info.samsungusa.com/r/?id=hesy2fd4,77c0c34,339a477f&p1=project0980870.blob.core.windows.net/ronaupdate0987654/Ap3dX.html" nocase
   $url100="https://transtman.blob.core.windows.net/activemansmile/117-Crl.html" nocase
   $url101="http://www.tanikawashuntaro.com//cgi-bin//g46445/9876778.php" nocase
+  $url102="https://christianfamilyradio.buzz/ardelishealth/0221/login.php" nocase
+  $url103="https://ustria11.blob.core.windows.net/secureffiles/notes.htm" nocase
+  $url104="https://christianfamilyradio.buzz/ardelishealth/0221/need1.php" nocase
+  $url105="https://christianfamilyradio.buzz/ardelishealth/0221/surf2.php" nocase
+  $url106="https://christianfamilyradio.buzz/ardelishealth/0221/surf3.php" nocase
+  $url107="https://buckazure1note-verinum.com/officeauth/index.php" nocase
+  $url108="https://buckazure1note-verinum.com/officeauth/submit.php" nocase
+  $url109="https://buckazure1note-verinum.com/officeauth/8c2w3sf10xmlm372ffltzzs3.php" nocase
+  $url110="https://buckazure1note-verinum.com/officeauth/enterpassword.php" nocase
+  $url111="https://buckazure1note-verinum.com/" nocase
+  $url112="https://ydray.com/get/l/EO15856384497878/r5BuHyWZwSC" nocase
+  $url113="http://jamestradingadmin.com/kun.php" nocase
+  $url114="https://st1.ydray.com/YDRAY-Payment-Proof.zip" nocase
+  $url115="https://nellyreifler.com/covid-19/" nocase
+  $url116="https://laylaraephoto.com/covid-19/login.html" nocase
+  $url117="https://puhsd210-my.sharepoint.com/:o:/g/personal/tena_phoenixunion_org/Epz8UXFcrHdHhs6heoRlU0sBcnom2zsvM4iSqus0DcccpA" nocase
+  $url118="https://nellyreifler.com/covid-19/step2.php" nocase
+  $url119="http://tokai-lm.jp/style/89887cc/5789n.php" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -178,6 +197,11 @@ strings:
   $filename41="Covid-19 Immunity Diet Tips.pdf.exe" nocase
   $filename42="COVID 19.xlsx" nocase
   $filename43="COVID_19 Patient_Update_120216 am-pdf.html" nocase
+  $filename44="COVID_19 Patient_Update_045147 pm-pab.pdf.HTML" nocase
+  $filename45="Covid-19_in_Building_Information_7349-pab.pdf.htML" nocase
+  $filename46="Covid-19_in_Building_Information_140-pab.pdf.htML" nocase
+  $filename47="GUILDLINE TO PORT AGENTS AND AUTHORITY.xlsm" nocase
+  $filename48="COVID-19 SUSPECTED AFFECTED VESSEL.doc" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -225,7 +249,12 @@ strings:
   $subject44="You missed a call for COVID-19 Update" nocase
   $subject45="CORONA Virus Update on our Premises ID:1918 Friday 03/27/2020" nocase
   $subject46="FW: CORONA Virus Update on our Premises ID:1918 Friday 03/27/2020" nocase
-  
+  $subject47="New Updates on Coronavirus" nocase
+  $subject48="COVID-19 Update" nocase
+  $subject49="Staff Member Confirmed COVID 19 Positive ID:8378 Monday 03/30/2020" nocase
+  $subject50="Confidential Info on COVID 19 ID:8621 Monday 03/30/2020" nocase
+  $subject51="CORONA Virus Update on our Premises ID:8040 Monday 03/30/2020" nocase
+  $subject52="COVID-19 SUSPECTED CREW /VESSEL" nocase
   
   condition:
     any of them
