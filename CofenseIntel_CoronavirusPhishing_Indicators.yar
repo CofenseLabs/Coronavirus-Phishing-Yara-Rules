@@ -6,10 +6,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "9"
-  known_variants_covered = "55"
+  version = "10"
+  known_variants_covered = "57"
   date_created = "17-Mar-2020"
-  last_updated = "31-Mar-2020"
+  last_updated = "01-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -18,7 +18,8 @@ meta:
   change_log_25Mar2020 = "added: 2 email addresses, 29 urls, 5 filenames, 5 subject lines"
   change_log_27Mar2020 = "added: 7 urls"
   change_log_30Mar2020 = "added: 1 email address, 5 urls, 7 filenames, 7 subject lines"
-  change_log_31Mar2020 = "added: 18 urls, 5 filenames, 6 subject lines"
+  change_log_31Mar2020 = "added: 18 urls, 5 filenames, 5 subject lines"
+  change_log_01Apr2020 = "added: 1 email address, 4 urls, 5 filenames, 2 subject lines"
 
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -34,7 +35,8 @@ strings:
   $email7="ricardo.ospina@bnb-spa.com" nocase	
   $email8="agarrard@protonmail.com" nocase
   $email9="mercylogs7@yandex.com" nocase
-
+  $email10="info@tpgoicoechea.com" nocase
+  
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
   $url3="http://onlinepreneur.id/license/love.exe" nocase
@@ -154,6 +156,10 @@ strings:
   $url117="https://puhsd210-my.sharepoint.com/:o:/g/personal/tena_phoenixunion_org/Epz8UXFcrHdHhs6heoRlU0sBcnom2zsvM4iSqus0DcccpA" nocase
   $url118="https://nellyreifler.com/covid-19/step2.php" nocase
   $url119="http://tokai-lm.jp/style/89887cc/5789n.php" nocase
+  $url120="https://hypothequeexcellence.com/wp-content/plugins/asd/83929288221/handler.php" nocase
+  $url121="https://lopppoooosdsdss.blob.core.windows.net/triumpeproeo/zxzxzxz.html" nocase
+  $url122="https://papapapapaapap.blob.core.windows.net/afarwaewewew/capapapa.html" nocase
+  $url123="https://www.infolapas.lv/company/" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -202,6 +208,11 @@ strings:
   $filename46="Covid-19_in_Building_Information_140-pab.pdf.htML" nocase
   $filename47="GUILDLINE TO PORT AGENTS AND AUTHORITY.xlsm" nocase
   $filename48="COVID-19 SUSPECTED AFFECTED VESSEL.doc" nocase
+  $filename49="ATT23364.htm" nocase
+  $filename50="ATT59981.htm" nocase
+  $filename51="ATT72137.htm" nocase
+  $filename52="COVID19_LIST.ISO" nocase
+  $filename53="LIST.EXE" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -250,11 +261,12 @@ strings:
   $subject45="CORONA Virus Update on our Premises ID:1918 Friday 03/27/2020" nocase
   $subject46="FW: CORONA Virus Update on our Premises ID:1918 Friday 03/27/2020" nocase
   $subject47="New Updates on Coronavirus" nocase
-  $subject48="COVID-19 Update" nocase
-  $subject49="Staff Member Confirmed COVID 19 Positive ID:8378 Monday 03/30/2020" nocase
-  $subject50="Confidential Info on COVID 19 ID:8621 Monday 03/30/2020" nocase
-  $subject51="CORONA Virus Update on our Premises ID:8040 Monday 03/30/2020" nocase
-  $subject52="COVID-19 SUSPECTED CREW /VESSEL" nocase
+  $subject48="Staff Member Confirmed COVID 19 Positive ID:8378 Monday 03/30/2020" nocase
+  $subject49="Confidential Info on COVID 19 ID:8621 Monday 03/30/2020" nocase
+  $subject50="CORONA Virus Update on our Premises ID:8040 Monday 03/30/2020" nocase
+  $subject51="COVID-19 SUSPECTED CREW /VESSEL" nocase
+  $subject52="You missed a call for COVID-19 Updated (0:25 sec)." nocase
+  $subject53="Corona Virus Cases: Find out How Many cases in your area" nocase
   
   condition:
     any of them
