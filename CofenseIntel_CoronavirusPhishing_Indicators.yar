@@ -1,15 +1,16 @@
 rule CofenseIntel_CoronavirusPhishing_Indicators {
 meta:
-  copyright = "/* (c) 2020 Cofense Inc. available at https://cofense.com/solutions/topic/coronavirus-infocenter/   */"
-  license = "This yara rule is offered pursuant to the Attribution-NonCommercial-NoDerivatives 4.0 International license, available at https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode."
+  copyright = "/*   (c) 2020 Cofense Inc. available at https://cofense.com/solutions/topic/coronavirus-infocenter/   */"
+  commercial_usage = "Requests to incorporate this Yara rule, in whole or in part, in commercial applications should be directed to covid@cofense.com"
+  non_commercial_usage = "This yara rule is offered pursuant to the Attribution-NonCommercial-NoDerivatives 4.0 International license, available at https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode."
   
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "10"
-  known_variants_covered = "57"
+  version = "11"
+  known_variants_covered = "62"
   date_created = "17-Mar-2020"
-  last_updated = "01-Apr-2020"
+  last_updated = "02-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -20,7 +21,10 @@ meta:
   change_log_30Mar2020 = "added: 1 email address, 5 urls, 7 filenames, 7 subject lines"
   change_log_31Mar2020 = "added: 18 urls, 5 filenames, 5 subject lines"
   change_log_01Apr2020 = "added: 1 email address, 4 urls, 5 filenames, 2 subject lines"
+  change_log_02Apr2020 = "added: 9 urls, 4 filenames, 6 subject lines"
 
+  
+  
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -160,6 +164,15 @@ strings:
   $url121="https://lopppoooosdsdss.blob.core.windows.net/triumpeproeo/zxzxzxz.html" nocase
   $url122="https://papapapapaapap.blob.core.windows.net/afarwaewewew/capapapa.html" nocase
   $url123="https://www.infolapas.lv/company/" nocase
+  $url124="https://onedrive.live.com/download?cid=AE80108520D75992&resid=AE80108520D75992!110&authkey=AJCvE1mFXphXOoo" nocase
+  $url125="http://idontspeakfear.com/doc/medi.msi" nocase
+  $url126="https://santacuenta.info/santa/particulares/request.php" nocase
+  $url127="https://santacuenta.info/santa/"  nocase
+  $url128="https://santacuenta.info/santa/particulares/home.php" nocase
+  $url129="https://cbhsnfiber.com/wp-content/office000365/fnoxglu0dy4q3k297vepc568irzj1tshmbwa9ql8ck7vbd4yz0ajxn5hg6pouwsem3if2rt1hfi4350yn7pvbgzodlmr8xtuje2c91aqk6sw" nocase
+  $url130="https://cbhsnfiber.com/wp-content/office000365/api.php" nocase
+  $url131="http://www.puzzleaddicts.me/wp-content/redirshshshggg/" nocase
+  $url132="https://cbhsnfiber.com/wp-content/office000365/request.php" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -213,6 +226,10 @@ strings:
   $filename51="ATT72137.htm" nocase
   $filename52="COVID19_LIST.ISO" nocase
   $filename53="LIST.EXE" nocase
+  $filename54="Supplier-Face Mask Forehead Thermometer.doc" nocase
+  $filename55="Your Voice-message_4.htm" nocase
+  $filename56="payment copy.com" nocase
+  $filename57="payment copy.iso" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -267,7 +284,13 @@ strings:
   $subject51="COVID-19 SUSPECTED CREW /VESSEL" nocase
   $subject52="You missed a call for COVID-19 Updated (0:25 sec)." nocase
   $subject53="Corona Virus Cases: Find out How Many cases in your area" nocase
-  
+  $subject54="Supplier-Face Mask/ Forehead Thermometer" nocase
+  $subject55="#QUEDATENCASA# COVID-19# Aviso importante !!" nocase
+  $subject56="Missed Audio To You On (COVID-19) Today 1 April, 2020 ##REF:GEKCRL_25907-2045" nocase
+  $subject57="Missed Audio To You On (COVID-19) Today 1 April, 2020 ##REF:EUDRGN_94422-2829" nocase
+  $subject58="Missed Audio To You On (COVID-19) Today 1 April, 2020 ##REF:XFFVCV_22445-0186" nocase
+  $subject59="Payment Assistance Due To Covid-19 Pandemic" nocase
+ 
   condition:
     any of them
 }
