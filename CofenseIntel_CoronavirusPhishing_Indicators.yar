@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "11"
-  known_variants_covered = "62"
+  version = "12"
+  known_variants_covered = "65"
   date_created = "17-Mar-2020"
-  last_updated = "02-Apr-2020"
+  last_updated = "03-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -22,9 +22,8 @@ meta:
   change_log_31Mar2020 = "added: 18 urls, 5 filenames, 5 subject lines"
   change_log_01Apr2020 = "added: 1 email address, 4 urls, 5 filenames, 2 subject lines"
   change_log_02Apr2020 = "added: 9 urls, 4 filenames, 6 subject lines"
-
-  
-  
+  change_log_03Apr2020 = "added: 7 urls, 7 filenames, 1 subject lines"
+      
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -172,7 +171,14 @@ strings:
   $url129="https://cbhsnfiber.com/wp-content/office000365/fnoxglu0dy4q3k297vepc568irzj1tshmbwa9ql8ck7vbd4yz0ajxn5hg6pouwsem3if2rt1hfi4350yn7pvbgzodlmr8xtuje2c91aqk6sw" nocase
   $url130="https://cbhsnfiber.com/wp-content/office000365/api.php" nocase
   $url131="http://www.puzzleaddicts.me/wp-content/redirshshshggg/" nocase
-  $url132="https://cbhsnfiber.com/wp-content/office000365/request.php" nocase
+  $url132="https://cbhsnfiber.com/wp-content/office000365/request.php" nocase  
+  $url133="https://drive.google.com/uc?export=download&id=1wKPszoP7U1-hXTTkAJOsW_qVZYcb0cnn" nocase
+  $url134="https://insurancebusinessmags.com/" nocase
+  $url135="https://craigne.buzz/busines-file/paid/sharepoint-v9/verification.php" nocase
+  $url136="https://craigne.buzz/busines-file/paid/sharepoint-v9/index.php" nocase
+  $url137="https://craigne.buzz/busines-file/paid/sharepoint-v9/k6ur6b5etxaznuc4wm12imm6.php" nocase
+  $url138="https://jhbfkjjkncvklnvkclbhjjzc.page.link/office-update" nocase
+  $url139="http://www.4up4.com/uploads/file_2020-03-21_014353.jpg" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -230,7 +236,14 @@ strings:
   $filename55="Your Voice-message_4.htm" nocase
   $filename56="payment copy.com" nocase
   $filename57="payment copy.iso" nocase
-  
+  $filename58="2302106.pdf" nocase
+  $filename59="5389175.pdf" nocase
+  $filename60="9544645.pdf" nocase
+  $filename61="covid_19_document.zip" nocase
+  $filename62="Ficha tecnica COVID19.vbs" nocase
+  $filename63="Ficha tecnica COVID19.vbs.bz2" nocase
+  $filename64="file_2020-03-21_014353.jpg" nocase
+
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
   $subject3="Attention: List Of Companies Affected With Coronavirus March 02, 2020" nocase
@@ -290,7 +303,8 @@ strings:
   $subject57="Missed Audio To You On (COVID-19) Today 1 April, 2020 ##REF:EUDRGN_94422-2829" nocase
   $subject58="Missed Audio To You On (COVID-19) Today 1 April, 2020 ##REF:XFFVCV_22445-0186" nocase
   $subject59="Payment Assistance Due To Covid-19 Pandemic" nocase
- 
+  $subject60="MULTAS COVID16 CUARNTENA OBLGATORIA" nocase
+  
   condition:
     any of them
 }
