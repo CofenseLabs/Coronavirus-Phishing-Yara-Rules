@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "13"
-  known_variants_covered = "66"
+  version = "14"
+  known_variants_covered = "68"
   date_created = "17-Mar-2020"
-  last_updated = "06-Apr-2020"
+  last_updated = "07-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -24,6 +24,7 @@ meta:
   change_log_02Apr2020 = "added: 9 urls, 4 filenames, 6 subject lines"
   change_log_03Apr2020 = "added: 7 urls, 7 filenames, 1 subject lines"
   change_log_06Apr2020 = "added: 2 urls, 2 filenames, 4 subject lines"
+  change_log_07Apr2020 = "added: 5 urls"
        
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -182,6 +183,11 @@ strings:
   $url139="http://www.4up4.com/uploads/file_2020-03-21_014353.jpg" nocase
   $url140="http://unlimitedimportandexport.com/wp-content/plugins/all-in-one-wp-migration/lib/cvxjR.exe" nocase
   $url141="https://drive.google.com/uc?export=download&id=1wKPszoP7U1-hXTTkAJOsW_qVZYcb0cnn" nocase
+  $url142="http://innocentminds.com/oauthorization.login/bang.php" nocase
+  $url143="http://innocentminds.com/oauthorization.login/Myhealth.exe" nocase
+  $url144="http://innocentminds.com/oauthorization.login/success.php" nocase
+  $url145="https://innocentminds.com/oauthorization.login/index.php?loginid=to%20access%20Myhealth%20app&emailid=" nocase
+  $url146="http://www.i-context.net/vv/myedit/" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -313,7 +319,7 @@ strings:
   $subject62=/Missed Audio To You On \(COVID-19\) Today .*? ##REF/ nocase
   $subject63=/Staff Member Confirmed COVID 19 Positive ID:\d+/ nocase
   $subject64="COVID-19 Explore Laniado Hospital latest update" nocase
-  
+
   condition:
     any of them
 }
