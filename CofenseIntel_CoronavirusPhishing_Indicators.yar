@@ -102,9 +102,9 @@ strings:
   $url59="https://goldenlion.sg/blacky2/hQFMCdSYQ81nUlp.exe" nocase
   $url60="https://netorgft6251601-my.sharepoint.com/personal/remote_enrollopen_com/_layouts/15/" nocase
   $url61="https://bluemediappc.ru/cxsw/?activity=4789652" nocase
-  $url62="hxxps://coronasdeflores.cl/who/" nocase
-  $url63="hxxps://coronasdeflores.cl/who/files/" nocase
-  $url64="hxxps://ee-cop.co.uk/who/" nocase 
+  $url62="https://coronasdeflores.cl/who/" nocase
+  $url63="https://coronasdeflores.cl/who/files/" nocase
+  $url64="https://ee-cop.co.uk/who/" nocase 
   $url65="https://ee-cop.co.uk/who/files/" nocase
   $url66="https://ee-cop.co.uk/who/files/3b9f575dac9cc432873f6165c9bed507.php" nocase
   $url67="https://heinrichgrp.com/who" nocase
