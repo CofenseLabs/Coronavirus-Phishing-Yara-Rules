@@ -332,7 +332,7 @@ strings:
   $subject63=/Staff Member Confirmed COVID 19 Positive ID:\d+/ nocase
   $subject64="COVID-19 Explore Laniado Hospital latest update" nocase
   $subject65="RE: NEW ORDER CORONA KITS" nocase
-  $subject66="Re: UN COVID-19 Stimulus" Nocase
+  $subject66="Re: UN COVID-19 Stimulus" nocase
  
   condition:
     any of them
