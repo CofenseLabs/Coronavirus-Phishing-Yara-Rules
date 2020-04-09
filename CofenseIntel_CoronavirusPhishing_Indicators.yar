@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "15"
-  known_variants_covered = "69"
+  version = "16"
+  known_variants_covered = "70"
   date_created = "17-Mar-2020"
-  last_updated = "08-Apr-2020"
+  last_updated = "09-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -26,6 +26,7 @@ meta:
   change_log_06Apr2020 = "added: 2 urls, 2 filenames, 4 subject lines"
   change_log_07Apr2020 = "added: 5 urls"
   change_log_08Apr2020 = "added: 1 email address, 3 filenames, 1 subject line"
+  change_log_09Apr2020 = "added: 1 email address, 1 url, 4 filenames, 1 subject line"
 
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -43,6 +44,7 @@ strings:
   $email9="mercylogs7@yandex.com" nocase
   $email10="info@tpgoicoechea.com" nocase
   $email11="obo@dormakeba.com" nocase
+  $email12="info@marmarisferry.com" nocase
   
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
@@ -190,6 +192,7 @@ strings:
   $url144="http://innocentminds.com/oauthorization.login/success.php" nocase
   $url145="https://innocentminds.com/oauthorization.login/index.php?loginid=to%20access%20Myhealth%20app&emailid=" nocase
   $url146="http://www.i-context.net/vv/myedit/" nocase
+  $url47="http://unlimitedimportandexport.com/wp-content/plugins/all-in-one-wp-migration/lib/bread.exe" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -259,6 +262,10 @@ strings:
   $filename67="CORONA KITS#ORDER 20200407.exe" nocase
   $filename68="CORONA KITS#ORDER 20200407.zip" nocase
   $filename69="CORONA KITS ORDER.ZIP" nocase
+  $filename70="WINNERS LIST COVID 19.doc" nocase
+  $filename71="o6959d.exe" nocase
+  $filename72="Excel.SheetMacroEnabled.12.xls" nocase
+  $filename73="Myhealth.exe" nocase
 
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -325,7 +332,8 @@ strings:
   $subject63=/Staff Member Confirmed COVID 19 Positive ID:\d+/ nocase
   $subject64="COVID-19 Explore Laniado Hospital latest update" nocase
   $subject65="RE: NEW ORDER CORONA KITS" nocase
-  
+  $subject66="Re: UN COVID-19 Stimulus" Nocase
+ 
   condition:
     any of them
 }
