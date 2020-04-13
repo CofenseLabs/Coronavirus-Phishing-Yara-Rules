@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "17"
-  known_variants_covered = "75"
+  version = "18"
+  known_variants_covered = "79"
   date_created = "17-Mar-2020"
-  last_updated = "10-Apr-2020"
+  last_updated = "13-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -27,7 +27,8 @@ meta:
   change_log_07Apr2020 = "added: 5 urls"
   change_log_08Apr2020 = "added: 1 email address, 3 filenames, 1 subject line"
   change_log_09Apr2020 = "added: 1 email address, 1 url, 4 filenames, 1 subject line"
-  change_log_10Apr2020 = "added: 4 email address, 3 urls, 9 filenames, 3 subject line"
+  change_log_10Apr2020 = "added: 4 email address, 3 urls, 9 filenames, 3 subject lines"
+  change_log_13Apr2020 = "added: 6 urls, 1 filenames, 2 subject lines"
 
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -201,7 +202,13 @@ strings:
   $url148="http://198.12.66.107/wzkjiCU.exe" nocase
   $url149="http://93.126.60.106/vDBAExRNFm.exe" nocase
   $url150="http://198.12.66.107/ewlANwI.exe" nocase
-
+  $url151="https://gameaze.com/wp-content/themes/wp_data.php" nocase
+  $url152="https://friendoffishing.com//wp-content/themes/calliope/template-parts/wp_data.php" nocase
+  $url153="http://dasi46.com/data/safari/hkt/feed.php" nocase
+  $url154="http://dasi46.com/data/safari/index.php" nocase
+  $url155="http://dasi46.com/data/safari/reward.html" nocase
+  $url156="http://photron.co.kr/xe/files/zones.php" nocase
+  
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -283,6 +290,7 @@ strings:
   $filename80="DOCX.doc" nocase
   $filename81="COVID-19 MEASURES & AFFECTED PORTS.xlsm" nocase
   $filename82="ewlANwI.exe" nocase
+  $filename83="Guidelines-566.xls" nocase
 
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -353,6 +361,8 @@ strings:
   $subject67="DAILY COVID-19 REPORTS RESEND OF NO. 14, WEDNESDAY 9th APRIL"
   $subject68=/DAILY COVID-19 REPORTS RESEND OF NO. / nocase
   $subject69="URGENT COVID-19 SUSPECTED AFFECTED VSL" nocase
+  $subject70="Important guidance for organizations as well as workers to plan and respond to coronavirus spread" nocase
+  $subject71="Your flight is cancelled: collect your refund" nocase
  
   condition:
     any of them
