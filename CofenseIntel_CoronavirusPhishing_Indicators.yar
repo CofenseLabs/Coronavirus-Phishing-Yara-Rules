@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "18"
-  known_variants_covered = "79"
+  version = "19"
+  known_variants_covered = "85"
   date_created = "17-Mar-2020"
-  last_updated = "13-Apr-2020"
+  last_updated = "14-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -29,6 +29,7 @@ meta:
   change_log_09Apr2020 = "added: 1 email address, 1 url, 4 filenames, 1 subject line"
   change_log_10Apr2020 = "added: 4 email address, 3 urls, 9 filenames, 3 subject lines"
   change_log_13Apr2020 = "added: 6 urls, 1 filenames, 2 subject lines"
+  change_log_14Apr2020 = "added: 92 urls, 7 filenames, 5 subject lines"
 
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -208,7 +209,99 @@ strings:
   $url154="http://dasi46.com/data/safari/index.php" nocase
   $url155="http://dasi46.com/data/safari/reward.html" nocase
   $url156="http://photron.co.kr/xe/files/zones.php" nocase
-  
+  $url157="https://firebasestorage.googleapis.com/v0/b/ibibapolyuser.appspot.com/o/index.htm" nocase
+  $url158="https://mindblog.com.ng/zltmworld/yhost.php" nocase
+  $url159="https://www.nflalumni.org/wp-admin/js/handler.php" nocase
+  $url160="https://wholenessfaceandbody.com/sharepoint/source/brand.php" nocase
+  $url161="https://wholenessfaceandbody.com/sharepoint/source/policy.php" nocase
+  $url162="https://wholenessfaceandbody.com/sharepoint/source/" nocase
+  $url163="https://wholenessfaceandbody.com/sharepoint/source/login.php" nocase
+  $url164="http://milap.net/ch.exe" nocase
+  $url165="http://54.37.131.204/index.php" nocase
+  $url166="https://firebasestorage.googleapis.com/v0/b/xxxvvvvxwbbb.appspot.com/o/5433457.html" nocase
+  $url167="https://unwithered-jams.000webhostapp.com/v9/v9/s/?signin" nocase
+  $url168="https://unwithered-jams.000webhostapp.com/v9/v9/?activity" nocase
+  $url169="https://unwithered-jams.000webhostapp.com/v9/v9/l_/submit.php" nocase
+  $url170="http://www.ignica.org/ebpuzm1x/sdspinler.php" nocase
+  $url171="http://hem.pmf.untz.ba/wp-admin/wclatimer.php" nocase
+  $url172="http://mailhubpros.com/.well-known/skorry.php" nocase
+  $url173="http://dentistmountainview.org/wp-content/wgitelman.php" nocase
+  $url174="http://restauracyjkaubabuni.pl/tmp/wc433862.php" nocase
+  $url175="http://catchingcourage.com/shopping/tony.php" nocase
+  $url176="http://perdossikaltim.com/images/rpdilemmo.php" nocase
+  $url177="http://agnigate.com/.quarantine/rpavuk.php" nocase
+  $url178="http://www.originhealth.ca/wp-includes/w_small.php" nocase
+  $url179="http://thelinkbuildingservices.com/openshop/rossmarshall.php" nocase
+  $url180="http://20tnews.com/wp-content/zona66.php" nocase
+  $url181="http://tatanusa.co.id/components/riccicorpxe3.php" nocase
+  $url182="http://violetfoundationla.org/wp-snapshots/rickmcveigh.php" nocase
+  $url183="http://www.idcl.co/.well-known/wjbard_9.php" nocase
+  $url184="http://languageterritory.com/css/tljnrusso.php" nocase
+  $url185="http://www.hanoimotor.net/wp-content/wgpatras1.php" nocase
+  $url186="http://hyderabadpestcontrolservices.com/wp-content/waterwork3.php" nocase
+  $url187="http://woprices.com/.well-known/wisbill111.php" nocase
+  $url188="http://gefsgp.cn/tmp/rmurf52.php" nocase
+  $url189="http://faitmaison.fr/wp-admin/sspetro.php" nocase
+  $url190="http://patatrading.com/manger/suiteblau.php" nocase
+  $url191="http://www.becomingtheboakyes.com/wp-content/shaghulbert.php" nocase
+  $url192="http://fascave.com/messon-bulk-sms-reseller-business-html-template/triedofthebullcrap.php" nocase
+  $url193="http://www.coliseuempresarial.com.br/rvsb-js/wstraub.php" nocase
+  $url194="http://nuchichietaphi.org/cli/trumanp1.php" nocase
+  $url195="http://mcinstalaciones.com.mx/wp-includes/wr_lin.php" nocase
+  $url196="http://all-babes.com/links/simplydancestudios.php" nocase
+  $url197="http://mattconnors.com/php/rockyrack2003.php" nocase
+  $url198="http://azramedicalsystems.com/.quarantine/wallerd21.php" nocase
+  $url199="http://www.idcl.co/.well-known/sstepp2548.php" nocase
+  $url200="http://www.newscreators.com/wp-admin/tructy72.php" nocase
+  $url201="http://bespokedistillery.co.uk/cgi-bin/roderick_mc.php" nocase
+  $url202="http://easefulmedia.com/pk/yhmh1999.php" nocase
+  $url203="http://bejoy.kiev.ua/ldow7k/yanpat.php" nocase
+  $url204="http://ogltrade.com/libraries/robert-lafleur.php" nocase
+  $url205="http://rsfcrm.com/bestcarpetcleanersnorthampton/tnmartinez1.php" nocase
+  $url206="http://home.gpak.in:88/wp-admin/spanishwildbull.php" nocase
+  $url207="http://exhaustaway.futurismdemo.com/.quarantine/rljbubba.php" nocase
+  $url208="http://www.amhypnotherapy.co.uk/wp-admin/wsfig.php" nocase
+  $url209="http://baotruocketqua.com/wp-admin/wterdale.php" nocase
+  $url210="http://sportsliv.net/.quarantine/scottforty.php" nocase
+  $url211="http://certificados.imperiumidiomas.com.br/cgi-bin/richardfrutiger.php" nocase
+  $url212="http://rongxsmb.com/home/wc556o.php" nocase
+  $url213="http://s35510.gridserver.com/css/steve525se.php" nocase
+  $url214="http://thefloralbasket.com/.well-known/tyster300.php" nocase
+  $url215="http://4salewebsites.com/df016f97f4975267aecd7ae77817deca/selcuk.php" nocase
+  $url216="http://osceconnect.com/jady/rogersaas.php" nocase
+  $url217="http://www.cakesbuy.in/.quarantine/wrhooton2.php" nocase
+  $url218="http://notkevinwong.com/Downloads/sawdustmechanic.php" nocase
+  $url219="http://techtucker.com/wp-includes/wineloverohio.php" nocase
+  $url220="http://burjbabel.org/wp-content/samgreen-1.php" nocase
+  $url221="http://remedy-mart.com/wp-admin/wildhalf.php" nocase
+  $url222="http://palmenapart.com.tr/plugins/tzak1984.php" nocase
+  $url223="http://biostem.com.br/wp-includes/zdenek_ulc.php" nocase
+  $url224="http://elationmanagement.com/f3vks2s/sevnava.php" nocase
+  $url225="http://calsportsmanmag.com/.well-known/tblackburn.php" nocase
+  $url226="http://dailysukaarkhi.com/efyt7/udressy-jd.php" nocase
+  $url227="http://www.hao6s.cn/re3g7u/tdom45.php" nocase
+  $url228="http://shreebabacaterers.com/dist/semperfi13.php" nocase
+  $url229="http://obamaga.com/wp-includes/seawolf126.php" nocase
+  $url230="http://mazoon-tourism.com/language/tlmcwilliams.php" nocase
+  $url231="http://fewlance.com/60562a08f9b45009b9c75e39afc83c74/storminnorman01.php" nocase
+  $url232="http://waterdamageremovallongisland.com/cgi-bin/rick48.1.php" nocase
+  $url233="http://radidyo.com/gallery/rkaapke.php" nocase
+  $url234="http://vietvisa.ru/wp-includes/wbielke.php" nocase
+  $url235="http://tomorrowdata.info/wp-admin/wlkbout.php" nocase
+  $url236="http://penplanner.com/cgi-bin/rigfisher.php" nocase
+  $url237="http://bknayakent.com/.well-known/wwing111.php" nocase
+  $url238="http://jovehairtwist.co.uk/wp-content/rsb1261.php" nocase
+  $url239="http://heresmygift.xyz/uzflp20mj/richardoberlender.php" nocase
+  $url240="http://tongaleitis.org/TLA/wernerrk.php" nocase
+  $url241="http://allelectric.biz/oldallelectric/rjpittaro.php" nocase
+  $url242="http://kryolaniraq.com/installation00/shebsolo1.php" nocase
+  $url243="http://www.jasonkelvin.co.uk/wp-content/thorshammer1221.php" nocase
+  $url244="http://babaszepsegverseny.hu/.well-known/roadrunner3142.php" nocase
+  $url245="http://zerosnap.store/images/rickn1574.php" nocase
+  $url246="http://www.90bikes90days.org/nqcfnp/tuscanwalls.php" nocase
+  $url247="http://gstore.guarismo.com/wp-content/wiretheworld.php" nocase
+  $url248="http://unlockbasics.host/cgi-bin/zvonkojurisic.php" nocase
+
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -291,6 +384,12 @@ strings:
   $filename81="COVID-19 MEASURES & AFFECTED PORTS.xlsm" nocase
   $filename82="ewlANwI.exe" nocase
   $filename83="Guidelines-566.xls" nocase
+  $filename84="-COVID-19-relief-949355628324366512-98774732133383838558-857585.htm" nocase
+  $filename85="VENTILATOR VG- 70 TECH. SHEET.XLSX" nocase
+  $filename86="coverage_PE893_3096.zip" nocase
+  $filename87="coverage_PE893.xls" nocase
+  $filename88="coverage_RC435_9757.zip" nocase
+  $filename89="coverage_RC435.xls" nocase
 
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -363,7 +462,12 @@ strings:
   $subject69="URGENT COVID-19 SUSPECTED AFFECTED VSL" nocase
   $subject70="Important guidance for organizations as well as workers to plan and respond to coronavirus spread" nocase
   $subject71="Your flight is cancelled: collect your refund" nocase
- 
+  $subject72="Motortrend Shared a Document using SharePointOnline" nocase
+  $subject73="VENTILATORS REQUIREMENT IN BULK QUANTITY" nocase
+  $subject74="New eVoice Message (COVID-19 URGENCY)" nocase
+  $subject75=/(the|this) (above|following) is a (safe|secure|protected) (message|e(-)?mail|notification) (coming )?from Humana\. \#\d+/ nocase
+  $subject76=/this is a (protected|safe|secure) (email|e-mail|message|notification) (from|coming from) Humana\. \#\d+/ nocase
+
   condition:
     any of them
 }
