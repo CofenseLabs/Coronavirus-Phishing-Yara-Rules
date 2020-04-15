@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "19"
-  known_variants_covered = "85"
+  version = "20"
+  known_variants_covered = "86"
   date_created = "17-Mar-2020"
-  last_updated = "14-Apr-2020"
+  last_updated = "15-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -30,6 +30,7 @@ meta:
   change_log_10Apr2020 = "added: 4 email address, 3 urls, 9 filenames, 3 subject lines"
   change_log_13Apr2020 = "added: 6 urls, 1 filenames, 2 subject lines"
   change_log_14Apr2020 = "added: 92 urls, 7 filenames, 5 subject lines"
+  change_log_15Apr2020 = "added: 3 urls, 2 filenames"
 
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -301,7 +302,10 @@ strings:
   $url246="http://www.90bikes90days.org/nqcfnp/tuscanwalls.php" nocase
   $url247="http://gstore.guarismo.com/wp-content/wiretheworld.php" nocase
   $url248="http://unlockbasics.host/cgi-bin/zvonkojurisic.php" nocase
-
+  $url249="https://darnovinc.com/wumtnoftpqueta/mava.html" nocase
+  $url250="https://darnovinc.com/wumtnoftpqueta/m2.php" nocase
+  $url251="https://darnovinc.com/wumtnoftpqueta/" nocase
+  
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -390,6 +394,8 @@ strings:
   $filename87="coverage_PE893.xls" nocase
   $filename88="coverage_RC435_9757.zip" nocase
   $filename89="coverage_RC435.xls" nocase
+  $filename90="UPS Attachment.iso" nocase
+  $filename91="UPS_ATTA.EXE" nocase
 
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
