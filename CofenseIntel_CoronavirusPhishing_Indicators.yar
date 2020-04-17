@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "21"
-  known_variants_covered = "89"
+  version = "22"
+  known_variants_covered = "91"
   date_created = "17-Mar-2020"
-  last_updated = "16-Apr-2020"
+  last_updated = "17-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -32,6 +32,7 @@ meta:
   change_log_14Apr2020 = "added: 92 urls, 7 filenames, 5 subject lines"
   change_log_15Apr2020 = "added: 3 urls, 2 filenames"
   change_log_16Apr2020 = "added: 2 email addresses, 2 urls, 3 filenames, 2 subject lines"
+  change_log_17Apr2020 = "added: 1 email address, 3 urls, 2 filenames, 1 subject lines"
   
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -56,7 +57,8 @@ strings:
   $email16="garang@platinships.net" nocase
   $email17="fido@flood-protection.org" nocase
   $email18="info@marmarisferry.com" nocase
-
+  $email19="chima@platinships.net" nocase
+  
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
   $url3="http://onlinepreneur.id/license/love.exe" nocase
@@ -310,7 +312,10 @@ strings:
   $url251="https://darnovinc.com/wumtnoftpqueta/" nocase
   $url252="https://www.easypos.vn/nhs.php" nocase
   $url253="https://www.visiolocationpro.com/nhs/?e=" nocase
-
+  $url254="http://docs.google.com/document/d/e/2PACX-1vSaRggHfSpoa95MBgxfb0nLnStg_u0suHzaVUs-uYr-qT7WEZunlhppPie5bF6xs6PLIukznPtZc5n0/pub" nocase
+  $url255="https://controltechsite.com/Preview.exe" nocase
+  $url256="http://198.12.66.107/vxVOgVh.exe" nocase
+  
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -404,7 +409,9 @@ strings:
   $filename92="latest cataloque.Doc.exe" nocase
   $filename93=/filename=\"[a-z]{1}\.[a-z]{1,4}([0-9]{1,4})?/ nocase
   $filename94="mlowARC.exe" nocase
-
+  $filename95="Final Packing List HPH (April 2020).xlsm" nocase
+  $filename96="SARS-nCov-2 Guidelines, Medical Cert & Declaration.doc" nocase
+  
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
   $subject3="Attention: List Of Companies Affected With Coronavirus March 02, 2020" nocase
@@ -482,7 +489,7 @@ strings:
   $subject75=/(the|this) (above|following) is a (safe|secure|protected) (message|e(-)?mail|notification) (coming )?from Humana\. \#\d+/ nocase
   $subject76=/this is a (protected|safe|secure) (email|e-mail|message|notification) (from|coming from) Humana\. \#\d+/ nocase
   $subject77="Fight Against Covid-19 Pandemic" nocase
-  $subject78="URGENT : XI-- ETA (PROACTIVE MEASURES ON VESSEL ANCHORAGE DUE TO COVID-19)" nocase
+  $subject79="PDA REQUEST LINER IN BASIS - MV COCO GYUN LOADING APPROX 56 PKGS / 1747 MT / 227" nocase
   
   condition:
     any of them
