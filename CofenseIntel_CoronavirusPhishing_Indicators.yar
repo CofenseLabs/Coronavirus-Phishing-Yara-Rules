@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "24"
-  known_variants_covered = "97"
+  version = "25"
+  known_variants_covered = "100"
   date_created = "17-Mar-2020"
-  last_updated = "21-Apr-2020"
+  last_updated = "22-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -35,7 +35,8 @@ meta:
   change_log_17Apr2020 = "added: 1 email address, 3 urls, 2 filenames, 1 subject lines"
   change_log_20Apr2020 = "added: 17 urls, 5 filenames, 2 subject lines"
   change_log_21Apr2020 = "added: 1 url, 3 filenames, 3 subject lines"
-      
+  change_log_22Apr2020 = "added: 2 email addresses, 8 urls, 3 subject lines"
+        
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -60,6 +61,8 @@ strings:
   $email17="fido@flood-protection.org" nocase
   $email18="info@marmarisferry.com" nocase
   $email19="chima@platinships.net" nocase
+  $email20="2020@website-practise.site" nocase
+  $email21="sumayyah.diijlafood@gmail.com" nocase
   
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
@@ -335,7 +338,15 @@ strings:
   $url272="https://docs.google.com/document/d/e/2PACX-1vROzSpK3dx02Gn0RTzuGkz6Ewr272EX-YKlApgnwxqkLQeKJb327_gW4GtQjDHqdKZLgKdUdi1l-LKn/pub" nocase
   $url273="https://bloomfieldholding.com/Document_Preview.exe" nocase
   $url274="https://drive.google.com/file/d/1m6u4b8eXvAWEzZoB9ne3nYn0GSBAsuMF/view" nocase
-  
+  $url275="http://access-servicegov.onthewifi.com/mate2.php" nocase
+  $url276="http://access-servicegov.onthewifi.com/" nocase
+  $url277="http://access-servicegov.onthewifi.com/success.html" nocase
+  $url278="http://access-servicegov.onthewifi.com/remodel-host.html" nocase
+  $url279="http://access-servicegov.onthewifi.com/mate.php" nocase
+  $url280="http://www.mediafire.com/file/hwd7ltleia95muf/wire_cheque1.7z/file" nocase
+  $url281="https://onedrive.live.com/download?cid=5696478ACB744989&resid=5696478ACB744989!383&authkey=ADLDpuAYA7Kj1Dk" nocase
+  $url282="http://apps.usw2.pure.cloud/s/#/1/r7qmdr3lvfekbkbrtw5kd6usdu" nocase
+
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -523,6 +534,9 @@ strings:
   $subject82="INVOICE PAYMENT DELAY DUE TO COVID 19" nocase
   $subject83="URGENT CARGO - Covid-19 TEST KITS & Masks" nocase
   $subject84="Covid 19 Update 2 // Safety Measures" nocase
+  $subject85="Coronavirus Job Retention Scheme Approved" nocase
+  $subject86="Corona_wire_cheque_payment" nocase
+  $subject87="Payee advise : Updated value date due to COVID-19 Lockdown" nocase
   
   condition:
     any of them
