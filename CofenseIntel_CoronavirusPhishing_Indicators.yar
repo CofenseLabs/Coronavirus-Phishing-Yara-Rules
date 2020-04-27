@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "26"
-  known_variants_covered = "102"
+  version = "27"
+  known_variants_covered = "107"
   date_created = "17-Mar-2020"
-  last_updated = "24-Apr-2020"
+  last_updated = "27-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -37,7 +37,8 @@ meta:
   change_log_21Apr2020 = "added: 1 url, 3 filenames, 3 subject lines"
   change_log_22Apr2020 = "added: 2 email addresses, 8 urls, 3 subject lines"
   change_log_24Apr2020 = "added: 1 email address, 2 filenames, 4 urls, 2 subject lines"
-            
+  change_log_27Apr2020 = "added: 3 email addresses, 1 filename, 37 urls"
+               
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -65,6 +66,9 @@ strings:
   $email20="2020@website-practise.site" nocase
   $email21="sumayyah.diijlafood@gmail.com" nocase
   $email22="sativa@hanwiha.com" nocase
+  $email23="salesjob@privejets.net" nocase
+  $email24="techhome18@gmail.com" nocase
+  $email25="we.us1@protonmail.com" nocase
   
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
@@ -352,7 +356,44 @@ strings:
   $url284="https://vermeulensingel.buzz/%25@#&$/webmail.php" nocase
   $url285="https://vermeulensingel.buzz/%25@#&$/office.php" nocase
   $url286="https://vermeulensingel.buzz/%25@#&$/" nocase
-
+  $url287="http://dwp-servicesonline.servehttp.com/Wells/profile-autorisea.html" nocase
+  $url288="http://dwp-servicesonline.servehttp.com/Wells/ser-dashboard.html" nocase
+  $url289="http://tinyurl.com/yb73c5g7" nocase
+  $url290="http://dwp-servicesonline.servehttp.com/Wells/iceture.php" nocase
+  $url291="http://dwp-servicesonline.servehttp.com/Wells/revampo.php" nocase
+  $url292="http://dwp-servicesonline.servehttp.com/Wells/less-rejected.html" nocase
+  $url293="http://dwp-servicesonline.servehttp.com/Wells/index.html" nocase
+  $url294="http://dwp-servicesonline.servehttp.com/Wells/f3.php" nocase
+  $url295="http://dwp-servicesonline.servehttp.com/Wells/info.html?chase.com/verify_id" nocase
+  $url296="http://dwp-servicesonline.servehttp.com/Wells/localtureflij.php" nocase
+  $url297="http://mailaccouncheckhere-project-file-update.weebly.com/" nocase
+  $url298="https://mailaccouncheckhere-project-file-update.weebly.com/ajax/apps/formSubmitAjax.php" nocase
+  $url299="https://cert-ssl-global-prod-webmeetings.com/da4njy=/idb/saml/jsp/step2.php" nocase
+  $url300="https://cert-ssl-global-prod-webmeetings.com/da4njy=/idb/saml/jsp/index.php" nocase
+  $url301="http://u15798743.ct.sendgrid.net/ls/click?upn=pQgbTiDayS6USZM4g8ffYLuCEs75hGQVzRZxps46NHc-3Dihev_ZzessVzDpjTxx3IgbPScVK85Q14g8Aseo8s40dmAn5V1oAwRXoL1jRjgHKAxgMABNkFfFJoE7b9DVP-2F-2FqWfbNKqlsXqheWQ5xidOb8wulxqyTu-2FeZSO0Eotw27eKa8B2bpz08LSp-2FDZ-2BWDHiEzr-2FzsK0KmXpK6kV8UXxE4Azy-2FUBRPiSJ0Y1YX759A88pyGtPjH1mPgchqQIYyPoj-2F9cDQ-3D-3D" nocase
+  $url302="https://playdemy.org/office/doc-new" nocase
+  $url303="https://playdemy.org/office/doc-new/a0l/" nocase
+  $url304="https://playdemy.org/office/doc-new/c0mcast/" nocase
+  $url305="https://playdemy.org/office/doc-new/centuryl1nk/" nocase
+  $url306="https://playdemy.org/office/doc-new/controls.php" nocase
+  $url307="https://playdemy.org/office/doc-new/docon.php" nocase
+  $url308="https://playdemy.org/office/doc-new/docready.php" nocase
+  $url309="https://playdemy.org/office/doc-new/earthl1nk/" nocase
+  $url310="https://playdemy.org/office/doc-new/g0daddy/" nocase
+  $url311="https://playdemy.org/office/doc-new/gma1l/" nocase
+  $url312="https://playdemy.org/office/doc-new/h0tmail0ffice/" nocase
+  $url313="https://playdemy.org/office/doc-new/h0tmail0ffice/auth.php" nocase
+  $url314="https://playdemy.org/office/doc-new/h0tmail0ffice/content-context.php" nocase
+  $url315="https://playdemy.org/office/doc-new/h0tmail0ffice/home.php" nocase
+  $url316="https://playdemy.org/office/doc-new/h0tmail0ffice/pwerror.php" nocase
+  $url317="https://playdemy.org/office/doc-new/h0tmail0ffice/src.php" nocase
+  $url318="https://playdemy.org/office/doc-new/opt0nline/" nocase
+  $url319="https://playdemy.org/office/doc-new/rackspac3/" nocase
+  $url320="https://playdemy.org/office/doc-new/rrc0m/" nocase
+  $url321="https://playdemy.org/office/doc-new/yah00/" nocase
+  $url322="https://taobaowangg.cn/doc/dennis-pdf2.php" nocase
+  $url323="https://taobaowangg.cn/doc/index.php" nocase
+  
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -458,6 +499,7 @@ strings:
   $filename104="_COVID- 19 Circular.jar" nocase
   $filename105="quotation.exe" nocase
   $filename106="quotation.iso" nocase
+  $filename107="COVID-19 Q & A Fact Sheet.pdf" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
