@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "27"
-  known_variants_covered = "107"
+  version = "28"
+  known_variants_covered = "109"
   date_created = "17-Mar-2020"
-  last_updated = "27-Apr-2020"
+  last_updated = "29-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -38,7 +38,8 @@ meta:
   change_log_22Apr2020 = "added: 2 email addresses, 8 urls, 3 subject lines"
   change_log_24Apr2020 = "added: 1 email address, 2 filenames, 4 urls, 2 subject lines"
   change_log_27Apr2020 = "added: 3 email addresses, 1 filename, 37 urls"
-               
+  change_log_29Apr2020 = "added: 2 email addresses, 2 filenames"
+                 
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -69,7 +70,9 @@ strings:
   $email23="salesjob@privejets.net" nocase
   $email24="techhome18@gmail.com" nocase
   $email25="we.us1@protonmail.com" nocase
-  
+  $email26="1679@qhub-subscription.store.qua.one" nocase
+  $email27="467@qhub-subscription.store.qua.one" nocase
+ 
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
   $url3="http://onlinepreneur.id/license/love.exe" nocase
@@ -500,6 +503,8 @@ strings:
   $filename105="quotation.exe" nocase
   $filename106="quotation.iso" nocase
   $filename107="COVID-19 Q & A Fact Sheet.pdf" nocase
+  $filename108="urgent inquire.jar" nocase
+  $filename109="Your Company PLP_Tax relief due to Covid-19 outbreak CI+PL.jar" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
