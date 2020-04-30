@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "28"
-  known_variants_covered = "109"
+  version = "29"
+  known_variants_covered = "113"
   date_created = "17-Mar-2020"
-  last_updated = "29-Apr-2020"
+  last_updated = "30-Apr-2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -39,7 +39,8 @@ meta:
   change_log_24Apr2020 = "added: 1 email address, 2 filenames, 4 urls, 2 subject lines"
   change_log_27Apr2020 = "added: 3 email addresses, 1 filename, 37 urls"
   change_log_29Apr2020 = "added: 2 email addresses, 2 filenames"
-                 
+  change_log_30Apr2020 = "added: 4 urls, 3 filenames, 1 subject line"
+                  
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -396,7 +397,11 @@ strings:
   $url321="https://playdemy.org/office/doc-new/yah00/" nocase
   $url322="https://taobaowangg.cn/doc/dennis-pdf2.php" nocase
   $url323="https://taobaowangg.cn/doc/index.php" nocase
-  
+  $url324="http://www.carre-rouge.info/wp-content/jayy/jay2020.exe" nocase
+  $url325="http://obimmaa.ir/todsay/Panel/five/fre.php" nocase
+  $url326="http://usapglobal.usapglobal.org/fresh/freshojakkkkk.exe" nocase
+  $url327="http://rtipetroleum.co.za/wp-includes/SimplePie/Decode/bman.php" nocase
+ 
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -505,7 +510,10 @@ strings:
   $filename107="COVID-19 Q & A Fact Sheet.pdf" nocase
   $filename108="urgent inquire.jar" nocase
   $filename109="Your Company PLP_Tax relief due to Covid-19 outbreak CI+PL.jar" nocase
-  
+  $filename110="Salary-Receipt.html" nocase
+  $filename111="outstanding orders.xlsx" nocase
+  $filename112="price-catalog-may.xlsx" nocase
+
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
   $subject3="Attention: List Of Companies Affected With Coronavirus March 02, 2020" nocase
@@ -593,7 +601,8 @@ strings:
   $subject86="Corona_wire_cheque_payment" nocase
   $subject87="Payee advise : Updated value date due to COVID-19 Lockdown" nocase
   $subject88="En línea con Covid19" nocase
-  $subject90="COVID-19 IgM - IgG Test Quotation" nocase
+  $subject89="COVID-19 IgM - IgG Test Quotation" nocase
+  $subject90="COVID-19 Distress Sales" nocase
   
   condition:
     any of them
