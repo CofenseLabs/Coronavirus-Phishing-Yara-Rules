@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "29"
-  known_variants_covered = "113"
-  date_created = "17-Mar-2020"
-  last_updated = "30-Apr-2020"
+  version = "30"
+  known_variants_covered = "115"
+  date_created = "17Mar2020"
+  last_updated = "01May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -40,7 +40,8 @@ meta:
   change_log_27Apr2020 = "added: 3 email addresses, 1 filename, 37 urls"
   change_log_29Apr2020 = "added: 2 email addresses, 2 filenames"
   change_log_30Apr2020 = "added: 4 urls, 3 filenames, 1 subject line"
-                  
+  change_log_01May2020 = "added: 1 email address, 3 urls, 2 subject lines"
+                 
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -73,6 +74,7 @@ strings:
   $email25="we.us1@protonmail.com" nocase
   $email26="1679@qhub-subscription.store.qua.one" nocase
   $email27="467@qhub-subscription.store.qua.one" nocase
+  $email28="sijuwa@saharanepal.coop.np" nocase
  
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
@@ -401,7 +403,10 @@ strings:
   $url325="http://obimmaa.ir/todsay/Panel/five/fre.php" nocase
   $url326="http://usapglobal.usapglobal.org/fresh/freshojakkkkk.exe" nocase
   $url327="http://rtipetroleum.co.za/wp-includes/SimplePie/Decode/bman.php" nocase
- 
+  $url328="https://filmka.eu/wp_adp/0ffi/" nocase
+  $url329="https://filmka.eu/wp_adp/0ffi/next.php" nocase
+  $url330="http://thesecuritysoftwarescannerindustrgreat.duckdns.org/lvc/vbc.exe" nocase
+  
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -603,6 +608,8 @@ strings:
   $subject88="En línea con Covid19" nocase
   $subject89="COVID-19 IgM - IgG Test Quotation" nocase
   $subject90="COVID-19 Distress Sales" nocase
+  $subject91="COVID-19 VACCINE from (201-990-100) " nocase
+  $subject92="URGENT ORDER FOR HAND SANITIZER" nocase
   
   condition:
     any of them
