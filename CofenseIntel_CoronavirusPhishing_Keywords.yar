@@ -13,7 +13,8 @@ meta:
 strings:
   $c1 = " corona" nocase
   $c2 = " covid" nocase
-  $c3 = "wuhan" nocase
+  $c3 = "codiv-19" nocase
+  $c4 = "wuhan" nocase
   $lure1 = "attached" nocase
   $lure2 = "invoice" nocase
   $lure3 = "PO"
