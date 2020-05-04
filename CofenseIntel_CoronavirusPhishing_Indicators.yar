@@ -1,5 +1,7 @@
 rule CofenseIntel_CoronavirusPhishing_Indicators {
 meta:
+  time_to_live="1 Month"
+  rule_context="Unwanted"
   copyright = "/*   (c) 2020 Cofense Inc. available at https://cofense.com/solutions/topic/coronavirus-infocenter/   */"
   commercial_usage = "Requests to incorporate this Yara rule, in whole or in part, in commercial applications should be directed to covid@cofense.com"
   non_commercial_usage = "This yara rule is offered pursuant to the Attribution-NonCommercial-NoDerivatives 4.0 International license, available at https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode."
@@ -7,10 +9,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "30"
-  known_variants_covered = "115"
+  version = "31"
+  known_variants_covered = "120"
   date_created = "17Mar2020"
-  last_updated = "01May2020"
+  last_updated = "04May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -41,7 +43,8 @@ meta:
   change_log_29Apr2020 = "added: 2 email addresses, 2 filenames"
   change_log_30Apr2020 = "added: 4 urls, 3 filenames, 1 subject line"
   change_log_01May2020 = "added: 1 email address, 3 urls, 2 subject lines"
-                 
+  change_log_04May2020 = "added: 4 filenames, 9 urls"
+                  
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -406,6 +409,15 @@ strings:
   $url328="https://filmka.eu/wp_adp/0ffi/" nocase
   $url329="https://filmka.eu/wp_adp/0ffi/next.php" nocase
   $url330="http://thesecuritysoftwarescannerindustrgreat.duckdns.org/lvc/vbc.exe" nocase
+  $url331="http://t.emk01.com/aXlE_rd/mXNkalrGdmNiY21tm13IoWeWbJqYZ3CajMh1amlpmG5pXJVxZYqfbmNjZmSSZ5qRZZZVk5ltbJSglGhYnm6VX6BzY2xqlm1nV59xmdNd1aFmi6ifyKCilJeSm6GkV9J2bFyicZWsi2GUe4FqsbCez5asrcq9i5_bwKuOpZiJvqWbn2WelpZpp4N4nIG-ip2h" nocase
+  $url332="https://dhlaexpdeliver.com/DHLa/Sign.php" nocase
+  $url333="https://dhlaexpdeliver.com/DHLa/" nocase
+  $url334="https://dhlaexpdeliver.com/DHLa/login.php" nocase
+  $url335="https://thedutchfoundations.com/brand.php" nocase
+  $url336="https://thedutchfoundations.com/" nocase
+  $url337="https://thedutchfoundations.com/policy.php" nocase
+  $url338="https://drive.google.com/u/0/uc?id=1aWwHlRf0oj3x3jQ8ZGQgKL3dFpYvbMB7&export=download" nocase
+  $url339="https://drive.google.com/u/0/uc?id=14478IMd3BD6V_Igv0a4E6gV_rPgeIMI4&export=download" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -518,6 +530,10 @@ strings:
   $filename110="Salary-Receipt.html" nocase
   $filename111="outstanding orders.xlsx" nocase
   $filename112="price-catalog-may.xlsx" nocase
+  $filename113="C0V-I9 Files.htm" nocase
+  $filename114="4GULS1DB.EXE" nocase
+  $filename115="PACKAGE_.EXE" nocase
+  $filename116="ReadMe.exe" nocase
 
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
