@@ -1,7 +1,5 @@
 rule CofenseIntel_CoronavirusPhishing_Indicators {
 meta:
-  time_to_live="1 Month"
-  rule_context="Unwanted"
   copyright = "/*   (c) 2020 Cofense Inc. available at https://cofense.com/solutions/topic/coronavirus-infocenter/   */"
   commercial_usage = "Requests to incorporate this Yara rule, in whole or in part, in commercial applications should be directed to covid@cofense.com"
   non_commercial_usage = "This yara rule is offered pursuant to the Attribution-NonCommercial-NoDerivatives 4.0 International license, available at https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode."
