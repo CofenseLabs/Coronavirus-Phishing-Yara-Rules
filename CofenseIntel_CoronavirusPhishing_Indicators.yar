@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "31"
-  known_variants_covered = "120"
+  version = "32"
+  known_variants_covered = "123"
   date_created = "17Mar2020"
-  last_updated = "04May2020"
+  last_updated = "05May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -42,7 +42,8 @@ meta:
   change_log_30Apr2020 = "added: 4 urls, 3 filenames, 1 subject line"
   change_log_01May2020 = "added: 1 email address, 3 urls, 2 subject lines"
   change_log_04May2020 = "added: 4 filenames, 9 urls"
-                  
+  change_log_05May2020 = "added: 1 subject line, 2 filenames, 9 urls"
+                                    
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -416,6 +417,15 @@ strings:
   $url337="https://thedutchfoundations.com/policy.php" nocase
   $url338="https://drive.google.com/u/0/uc?id=1aWwHlRf0oj3x3jQ8ZGQgKL3dFpYvbMB7&export=download" nocase
   $url339="https://drive.google.com/u/0/uc?id=14478IMd3BD6V_Igv0a4E6gV_rPgeIMI4&export=download" nocase
+  $url340="https://kjhakjah-atendimento-com.umbler.net/Netflix/send_cartao_credito.php" nocase
+  $url341="https://kjhakjah-atendimento-com.umbler.net/Netflix/" nocase
+  $url342="https://rebrand.ly/to4rlvc" nocase
+  $url343="http://formsite1.01065547811.com/screen_.php" nocase
+  $url344="http://covid19.hhhjgj.com/screen_.php" nocase
+  $url345="http://covid19.seopaketleri.net/screen_.php" nocase
+  $url346="http://covid19.tsukihi-shufa.com/screen_.php" nocase
+  $url347="http://covid19.pichiwaca.com/screen_.php" nocase
+  $url348="http://covid19.justusedet.com/screen_.php" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -532,6 +542,8 @@ strings:
   $filename114="4GULS1DB.EXE" nocase
   $filename115="PACKAGE_.EXE" nocase
   $filename116="ReadMe.exe" nocase
+  $filename117="COVID-19_SBA_Disaster_Fund_Deposits (1).pdf" nocase
+  $filename118="COVID-19_SBA_Disaster_Fund_Deposits.pdf" nocase
 
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -624,6 +636,7 @@ strings:
   $subject90="COVID-19 Distress Sales" nocase
   $subject91="COVID-19 VACCINE from (201-990-100) " nocase
   $subject92="URGENT ORDER FOR HAND SANITIZER" nocase
+  $subject93="Plataforma Netflix grates pelo periodo de isolamento social. - " nocase
   
   condition:
     any of them
