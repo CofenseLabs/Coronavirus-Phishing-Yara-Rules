@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "32"
-  known_variants_covered = "123"
+  version = "33"
+  known_variants_covered = "126"
   date_created = "17Mar2020"
-  last_updated = "05May2020"
+  last_updated = "06May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -43,7 +43,8 @@ meta:
   change_log_01May2020 = "added: 1 email address, 3 urls, 2 subject lines"
   change_log_04May2020 = "added: 4 filenames, 9 urls"
   change_log_05May2020 = "added: 1 subject line, 2 filenames, 9 urls"
-                                    
+  change_log_06May2020 = "added: 3 subject lines, 1 filename, 7 urls"
+                                       
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -426,6 +427,13 @@ strings:
   $url346="http://covid19.tsukihi-shufa.com/screen_.php" nocase
   $url347="http://covid19.pichiwaca.com/screen_.php" nocase
   $url348="http://covid19.justusedet.com/screen_.php" nocase
+  $url349="https://pierottohome.gr/wp-content/themes/exffficnses385/request.php" nocase
+  $url350="https://pierottohome.gr/wp-content/themes/exffficnses385/api.php" nocase
+  $url351="https://pierottohome.gr/wp-content/themes/exffficnses385/i4vrfl36ka1wcebnq5jx7dhtz0my92gup8sonquylce1sroazp0xmgd72k5wfj963hv4ibt8p719u5ewdvlo084nijf6hgcbsm2xrqtayk3z?data=" nocase
+  $url352="https://docs.google.com/forms/d/e/1FAIpQLSfaDnPxSEVpGmz-xoNijw1RfAb2bEW9UW3YYrHBfMxdmqPeMg/viewform" nocase
+  $url353="https://www.dropbox.com/l/AACT4tEBUaQYychKneAQmGImTgt53mggbvI" nocase
+  $url354="https://santeinfoplus.org/0x7h/Adobe-Document.php" nocase
+  $url355="http://santeinfoplus.org/0x7h/" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -544,6 +552,7 @@ strings:
   $filename116="ReadMe.exe" nocase
   $filename117="COVID-19_SBA_Disaster_Fund_Deposits (1).pdf" nocase
   $filename118="COVID-19_SBA_Disaster_Fund_Deposits.pdf" nocase
+  $filename119="COVID-19_Disaster_Fund_Payout.PDF" nocase
 
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -637,6 +646,9 @@ strings:
   $subject91="COVID-19 VACCINE from (201-990-100) " nocase
   $subject92="URGENT ORDER FOR HAND SANITIZER" nocase
   $subject93="Plataforma Netflix grates pelo periodo de isolamento social. - " nocase
+  $subject94="IRS COVID-19 Stimulus Check Payment" nocase
+  $subject95="IRS COVID-19 Stimulus Payment1" nocase
+  $subject96="Reminder: The Small Business Grant Fund (Gov.uk) sent you " nocase
   
   condition:
     any of them
