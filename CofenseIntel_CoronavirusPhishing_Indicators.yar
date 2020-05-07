@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "33"
-  known_variants_covered = "126"
+  version = "34"
+  known_variants_covered = "129"
   date_created = "17Mar2020"
-  last_updated = "06May2020"
+  last_updated = "07May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -44,7 +44,8 @@ meta:
   change_log_04May2020 = "added: 4 filenames, 9 urls"
   change_log_05May2020 = "added: 1 subject line, 2 filenames, 9 urls"
   change_log_06May2020 = "added: 3 subject lines, 1 filename, 7 urls"
-                                       
+  change_log_07May2020 = "added: 2 subject lines, 1 filename, 6 urls"
+                                           
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -434,6 +435,12 @@ strings:
   $url353="https://www.dropbox.com/l/AACT4tEBUaQYychKneAQmGImTgt53mggbvI" nocase
   $url354="https://santeinfoplus.org/0x7h/Adobe-Document.php" nocase
   $url355="http://santeinfoplus.org/0x7h/" nocase
+  $url356="http://googledoccovid19.com/" nocase
+  $url357="http://googledoccovid19.com/22-2/" nocase
+  $url358="http://googledoccovid19.com/22-2/#contact-form-22" nocase
+  $url359="https://papaegallo.ru/cvgy/" nocase
+  $url360="https://is.gd/mKnsVL" nocase
+  $url361="https://gibsondros.co.uk" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -553,7 +560,8 @@ strings:
   $filename117="COVID-19_SBA_Disaster_Fund_Deposits (1).pdf" nocase
   $filename118="COVID-19_SBA_Disaster_Fund_Deposits.pdf" nocase
   $filename119="COVID-19_Disaster_Fund_Payout.PDF" nocase
-
+  $filename120="-✉-Covid19 Relief Plan87878-23636sd.htm"
+  
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
   $subject3="Attention: List Of Companies Affected With Coronavirus March 02, 2020" nocase
@@ -649,6 +657,8 @@ strings:
   $subject94="IRS COVID-19 Stimulus Check Payment" nocase
   $subject95="IRS COVID-19 Stimulus Payment1" nocase
   $subject96="Reminder: The Small Business Grant Fund (Gov.uk) sent you " nocase
+  $subject97="AN ASSOCIATE INVITATION to edit(via Google Docs)" nocase
+  $subject98="COVID-19 Benefits- Government Funded " nocase
   
   condition:
     any of them
