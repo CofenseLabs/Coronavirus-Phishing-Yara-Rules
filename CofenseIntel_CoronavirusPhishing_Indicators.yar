@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "34"
-  known_variants_covered = "129"
+  version = "35"
+  known_variants_covered = "132"
   date_created = "17Mar2020"
-  last_updated = "07May2020"
+  last_updated = "08May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -45,7 +45,8 @@ meta:
   change_log_05May2020 = "added: 1 subject line, 2 filenames, 9 urls"
   change_log_06May2020 = "added: 3 subject lines, 1 filename, 7 urls"
   change_log_07May2020 = "added: 2 subject lines, 1 filename, 6 urls"
-                                           
+  change_log_08May2020 = "added: 1 email address, 2 subject lines, 4 filenames, 2 urls"
+                                              
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -79,7 +80,8 @@ strings:
   $email26="1679@qhub-subscription.store.qua.one" nocase
   $email27="467@qhub-subscription.store.qua.one" nocase
   $email28="sijuwa@saharanepal.coop.np" nocase
- 
+  $email29="gamzyyolowo@yandex.com" nocase
+
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
   $url3="http://onlinepreneur.id/license/love.exe" nocase
@@ -441,7 +443,9 @@ strings:
   $url359="https://papaegallo.ru/cvgy/" nocase
   $url360="https://is.gd/mKnsVL" nocase
   $url361="https://gibsondros.co.uk" nocase
-  
+  $url362="http://covid-192.godaddysites.com/" nocase
+  $url363="http://covid-192.godaddysites.com/v3/messages" nocase
+
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -561,6 +565,10 @@ strings:
   $filename118="COVID-19_SBA_Disaster_Fund_Deposits.pdf" nocase
   $filename119="COVID-19_Disaster_Fund_Payout.PDF" nocase
   $filename120="-✉-Covid19 Relief Plan87878-23636sd.htm"
+  $filename121="COVID-19 Face Mask.zip" nocase
+  $filename122="COVID-19 Face Mask.exe" nocase
+  $filename123="Forehead thermometers.zip" nocase
+  $filename124="Forehead thermometers.exe" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -659,6 +667,8 @@ strings:
   $subject96="Reminder: The Small Business Grant Fund (Gov.uk) sent you " nocase
   $subject97="AN ASSOCIATE INVITATION to edit(via Google Docs)" nocase
   $subject98="COVID-19 Benefits- Government Funded " nocase
+  $subject99="COVID-19 Formulier voor het volgen van symptomen van werknemers." nocase
+  $subject100="URGENT NEED: U.S. Department of Health & Human Services/COVID-19 Face Mask/ Forehead thermometers" nocase
   
   condition:
     any of them
