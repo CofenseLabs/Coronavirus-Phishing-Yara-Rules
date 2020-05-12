@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "35"
-  known_variants_covered = "132"
+  version = "36"
+  known_variants_covered = "137"
   date_created = "17Mar2020"
-  last_updated = "08May2020"
+  last_updated = "12May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -46,12 +46,14 @@ meta:
   change_log_06May2020 = "added: 3 subject lines, 1 filename, 7 urls"
   change_log_07May2020 = "added: 2 subject lines, 1 filename, 6 urls"
   change_log_08May2020 = "added: 1 email address, 2 subject lines, 4 filenames, 2 urls"
-                                              
+  change_log_12May2020 = "added: 1domain, 4 subject lines, 1 filename, 12 urls"
+                                               
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
   $domain3="seasonsnonaco.ddnsking.com" nocase
-
+  $domain4="ouluok.hereag.xyz" nocase
+  
   $email1="zakir@perfectfashion-bd.com" nocase
   $email2="postmaster@mallinckrodt.xyz" nocase
   $email3="brentpaul403@yandex.ru" nocase
@@ -445,7 +447,19 @@ strings:
   $url361="https://gibsondros.co.uk" nocase
   $url362="http://covid-192.godaddysites.com/" nocase
   $url363="http://covid-192.godaddysites.com/v3/messages" nocase
-
+  $url364="http://37.49.225.137/HARRY%20B_mcvGZe134.bin" nocase
+  $url365="http://damp-aso-9673.weblike.jp/OSE/OSI.exe" nocase
+  $url366="https://docs.google.com/forms/d/e/1FAIpQLSch3jVbHGvT7tS7gnBnjWhdTJx14ebUOuAu97uwhgF_amMI-A/formResponse" nocase
+  $url367="http://docs.google.com/forms/d/e/1FAIpQLSch3jVbHGvT7tS7gnBnjWhdTJx14ebUOuAu97uwhgF_amMI-A/viewform" nocase
+  $url368="https://ouluok.hereag.xyz/newfile/04d524031f/rboxscript.php" nocase
+  $url369="https://ouluok.hereag.xyz/" nocase
+  $url370="https://ouluok.hereag.xyz/newfile/04d524031f/signin.php" nocase
+  $url371="https://ouluok.hereag.xyz/newfile/04d524031f/assets/sendscript.js" nocase
+  $url372="https://ouluok.hereag.xyz/newfile/04d524031f/" nocase
+  $url373="http://0i.is/gbiR" nocase
+  $url374="http://blocb.flywheelsites.com/wp-content/plugins/ubh/logabod"
+  $url375="http://t.ly/Le26V" nocase
+  
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
   $filename3="CORONA VIRUS REMEDY ISREAL.doc" nocase
@@ -569,7 +583,8 @@ strings:
   $filename122="COVID-19 Face Mask.exe" nocase
   $filename123="Forehead thermometers.zip" nocase
   $filename124="Forehead thermometers.exe" nocase
-  
+  $filename125="Medical disposable products.xlsx" nocase
+
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
   $subject3="Attention: List Of Companies Affected With Coronavirus March 02, 2020" nocase
@@ -669,6 +684,10 @@ strings:
   $subject98="COVID-19 Benefits- Government Funded " nocase
   $subject99="COVID-19 Formulier voor het volgen van symptomen van werknemers." nocase
   $subject100="URGENT NEED: U.S. Department of Health & Human Services/COVID-19 Face Mask/ Forehead thermometers" nocase
+  $subject101="Disposable face mask, coverall, isloation gown, shoe cover and so on" nocase
+  $subject102="COVID-19 Update ;Premium Office apps with Microsoft 365" nocase
+  $subject103="Overdue contribution schedule(s), Coronavirus (COVID-19) version" nocase
+  $subject104="Covid-19 Emergency funds Update" nocase
   
   condition:
     any of them
