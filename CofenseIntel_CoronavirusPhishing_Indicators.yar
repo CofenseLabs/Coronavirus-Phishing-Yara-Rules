@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "36"
-  known_variants_covered = "137"
+  version = "37"
+  known_variants_covered = "138"
   date_created = "17Mar2020"
-  last_updated = "12May2020"
+  last_updated = "13May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -46,7 +46,8 @@ meta:
   change_log_06May2020 = "added: 3 subject lines, 1 filename, 7 urls"
   change_log_07May2020 = "added: 2 subject lines, 1 filename, 6 urls"
   change_log_08May2020 = "added: 1 email address, 2 subject lines, 4 filenames, 2 urls"
-  change_log_12May2020 = "added: 1domain, 4 subject lines, 1 filename, 12 urls"
+  change_log_12May2020 = "added: 1 domain, 4 subject lines, 1 filename, 12 urls"
+  change_log_13May2020 = "added: domain, 1 subject line, 3 filenames, 4 urls"
                                                
 strings:
   $domain1="cornerload.dynu.net" nocase
@@ -458,7 +459,11 @@ strings:
   $url372="https://ouluok.hereag.xyz/newfile/04d524031f/" nocase
   $url373="http://0i.is/gbiR" nocase
   $url374="http://blocb.flywheelsites.com/wp-content/plugins/ubh/logabod"
-  $url375="http://t.ly/Le26V" nocase
+  $url375="http://t.ly/Le26V" nocase  
+  $url376="http://94.158.245.25/2.msi" nocase
+  $url377="http://goust.xyz/ssh.zip" nocase
+  $url378="http://sdsddgu.xyz/khkhkt" nocase
+  $url379="https://sellmyracket.com/wp-content/uploads/signed.exe" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -584,7 +589,10 @@ strings:
   $filename123="Forehead thermometers.zip" nocase
   $filename124="Forehead thermometers.exe" nocase
   $filename125="Medical disposable products.xlsx" nocase
-
+  $filename126="2.msi" nocase
+  $filename127="fmla.slk" nocase
+  $filename128="fmla.zip" nocase
+  
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
   $subject3="Attention: List Of Companies Affected With Coronavirus March 02, 2020" nocase
@@ -688,6 +696,7 @@ strings:
   $subject102="COVID-19 Update ;Premium Office apps with Microsoft 365" nocase
   $subject103="Overdue contribution schedule(s), Coronavirus (COVID-19) version" nocase
   $subject104="Covid-19 Emergency funds Update" nocase
+  $subject105="The following is a new Employee Request Form for leave within the Family and Medical Leave of Act (FMLA) Family and Medical Leave Act (FMLA)" nocase
   
   condition:
     any of them
