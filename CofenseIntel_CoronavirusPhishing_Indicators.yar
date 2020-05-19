@@ -7,8 +7,8 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "37"
-  known_variants_covered = "138"
+  version = "38"
+  known_variants_covered = "141"
   date_created = "17Mar2020"
   last_updated = "13May2020"
   change_log_17Mar2020 = "initial rule creation"
@@ -48,7 +48,8 @@ meta:
   change_log_08May2020 = "added: 1 email address, 2 subject lines, 4 filenames, 2 urls"
   change_log_12May2020 = "added: 1 domain, 4 subject lines, 1 filename, 12 urls"
   change_log_13May2020 = "added: 1 subject line, 3 filenames, 4 urls"
-                                               
+  change_log_19May2020 = "added: 1 email address, 2 subject lines, 7 urls"
+                                                
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -84,7 +85,8 @@ strings:
   $email27="467@qhub-subscription.store.qua.one" nocase
   $email28="sijuwa@saharanepal.coop.np" nocase
   $email29="gamzyyolowo@yandex.com" nocase
-
+  $email30="hmrc@hotmail.com" nocase
+  
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
   $url3="http://onlinepreneur.id/license/love.exe" nocase
@@ -464,6 +466,13 @@ strings:
   $url377="http://goust.xyz/ssh.zip" nocase
   $url378="http://sdsddgu.xyz/khkhkt" nocase
   $url379="https://sellmyracket.com/wp-content/uploads/signed.exe" nocase
+  $url380="http://www.just-bee.nl/phpmailo/UTR/Message.php" nocase
+  $url381="http://www.just-bee.nl/phpmailo/UTR/index.php" nocase
+  $url382="http://www.lagesports.com/.tmb/xml.php" nocase
+  $url383="http://www.just-bee.nl/phpmailo/UTR/Finish.php" nocase
+  $url384="https://ocxidso29sd-shy-lynx.mybluemix.net/?bbre=3013dspxzi" nocase
+  $url385="https://newof9a.bestnewsworld.info/nn/savd/xxposnto.php" nocase
+  $url386="https://newof9a.bestnewsworld.info/nn/normal/loading.php" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -697,6 +706,8 @@ strings:
   $subject103="Overdue contribution schedule(s), Coronavirus (COVID-19) version" nocase
   $subject104="Covid-19 Emergency funds Update" nocase
   $subject105="The following is a new Employee Request Form for leave within the Family and Medical Leave of Act (FMLA) Family and Medical Leave Act (FMLA)" nocase
+  $subject106="Helping you during this covid from government" nocase
+  $subject107="NHS Payment per COVID-19" nocase
   
   condition:
     any of them
