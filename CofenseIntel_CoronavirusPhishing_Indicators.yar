@@ -10,7 +10,7 @@ meta:
   version = "38"
   known_variants_covered = "141"
   date_created = "17Mar2020"
-  last_updated = "13May2020"
+  last_updated = "19May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
