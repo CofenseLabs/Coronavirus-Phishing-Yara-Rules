@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "38"
-  known_variants_covered = "141"
+  version = "39"
+  known_variants_covered = "145"
   date_created = "17Mar2020"
-  last_updated = "19May2020"
+  last_updated = "22May2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -49,7 +49,8 @@ meta:
   change_log_12May2020 = "added: 1 domain, 4 subject lines, 1 filename, 12 urls"
   change_log_13May2020 = "added: 1 subject line, 3 filenames, 4 urls"
   change_log_19May2020 = "added: 1 email address, 2 subject lines, 7 urls"
-                                                
+  change_log_19May2020 = "added: 2 subject lines, 3 filenames, 8 urls"
+                                                    
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -473,6 +474,14 @@ strings:
   $url384="https://ocxidso29sd-shy-lynx.mybluemix.net/?bbre=3013dspxzi" nocase
   $url385="https://newof9a.bestnewsworld.info/nn/savd/xxposnto.php" nocase
   $url386="https://newof9a.bestnewsworld.info/nn/normal/loading.php" nocase
+  $url387="https://yakuza.nsupdate.info/yakuza11111111111111111111111111111111111111111112/Fqht" nocase
+  $url388="http://170.130.55.77/s1Qa9vCs/load.exe" nocase
+  $url389="https://is.gd/VxNJWp" nocase
+  $url390="https://hmrc.com.onlinesecuremyaccount.italianamericanrelief.org/online/refund/details2" nocase
+  $url391="https://hmrc.com.onlinesecuremyaccount.italianamericanrelief.org/online/refund/details" nocase
+  $url392="https://tinyurl.com/ydayens7" nocase
+  $url394="https://hmrc.com.onlinesecuremyaccount.italianamericanrelief.org/online/refund/index?code=2" nocase
+  $url395="https://drive.google.com/u/0/uc?id=1eGQVD_Vj0J3YM7VNtBmBUpN3e4TjX_h5&export=download" nocase
   
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -601,6 +610,9 @@ strings:
   $filename126="2.msi" nocase
   $filename127="fmla.slk" nocase
   $filename128="fmla.zip" nocase
+  $filename129="ATTACHME.EXE" nocase
+  $filename130="myattachment.iso" nocase
+  $filename131="Codid19-Check_v0151f60.xlsm" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -708,6 +720,8 @@ strings:
   $subject105="The following is a new Employee Request Form for leave within the Family and Medical Leave of Act (FMLA) Family and Medical Leave Act (FMLA)" nocase
   $subject106="Helping you during this covid from government" nocase
   $subject107="NHS Payment per COVID-19" nocase
+  $subject108="UNABLE TO REMIT TAX REFUND PAYMENT - UPDATE ON COVID-19" nocase
+  $subject109="Are you scared of coronavirus? Act immideately?" nocase
   
   condition:
     any of them
