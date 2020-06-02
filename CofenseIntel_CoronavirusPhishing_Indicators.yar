@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "40"
-  known_variants_covered = "148"
+  version = "41"
+  known_variants_covered = "153"
   date_created = "17Mar2020"
-  last_updated = "26May2020"
+  last_updated = "02Jun2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -51,7 +51,8 @@ meta:
   change_log_19May2020 = "added: 1 email address, 2 subject lines, 7 urls"
   change_log_22May2020 = "added: 2 subject lines, 3 filenames, 8 urls"
   change_log_26May2020 = "added: 1 email address, 3 subject lines, 2 filenames, 5 urls"
-                                                     
+  change_log_02Jun2020 = "added:  email address, 2 subject lines, 5 filenames, 4 urls"
+                                                       
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -89,6 +90,8 @@ strings:
   $email29="gamzyyolowo@yandex.com" nocase
   $email30="hmrc@hotmail.com" nocase
   $email31="lucinedauglas@yandex.com" nocase
+  $email132="fran.cess@yandex.com" nocase
+  $email133="webhost@bmdonline.ro" nocase
   
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
@@ -489,6 +492,10 @@ strings:
   $url398="http://energyscandinavia.eu/js/xml.php?71c29200f0c2550b467b70f8fdd5bb0c" nocase
   $url399="https://www.yalda.co/.well-known/index.php" nocase
   $url400="https://www.yalda.co/.well-known/finish.php" nocase
+  $url401="http://siitgo.com/u/index.php" nocase
+  $url402="http://siitgo.com/u/check.php" nocase
+  $url403="http://migration2.godaddysites.com/" nocase
+  $url404="http://h2arc.com/wp-includes/ID3/send.php" nocase
 
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -622,6 +629,11 @@ strings:
   $filename131="Codid19-Check_v0151f60.xlsm" nocase
   $filename132="Getein 3 Ply Face Mask.exe" nocase
   $filename133="LIST OF BANNED GOODS.html" nocase
+  $filename134="June_Order.zip" nocase
+  $filename135="June_Order.exe" nocase
+  $filename136="Order Datasheet.zip" nocase
+  $filename137="Order Datasheet.exe" nocase
+  $filename138="GrantForm.html" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -734,7 +746,9 @@ strings:
   $subject110="Getein 3 Ply Single Use Face Mask" nocase
   $subject111="BANNED GOODS DUE TO COVID 19" nocase
   $subject112="Get your support if you have lost a job" nocase
-  
+  $subject113="Important COVID-19 Fund Approval" nocase
+  $subject114="Mask-KN95, 3-ply civilian disposable masks and gloves" nocase
+
   condition:
     any of them
 }
