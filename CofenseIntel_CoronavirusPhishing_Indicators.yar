@@ -51,7 +51,7 @@ meta:
   change_log_19May2020 = "added: 1 email address, 2 subject lines, 7 urls"
   change_log_22May2020 = "added: 2 subject lines, 3 filenames, 8 urls"
   change_log_26May2020 = "added: 1 email address, 3 subject lines, 2 filenames, 5 urls"
-  change_log_02Jun2020 = "added:  email address, 2 subject lines, 5 filenames, 4 urls"
+  change_log_02Jun2020 = "added: 2 subject lines, 5 filenames, 4 urls"
                                                        
 strings:
   $domain1="cornerload.dynu.net" nocase
