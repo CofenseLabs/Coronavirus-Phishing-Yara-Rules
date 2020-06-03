@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "41"
-  known_variants_covered = "153"
+  version = "42"
+  known_variants_covered = "155"
   date_created = "17Mar2020"
-  last_updated = "02Jun2020"
+  last_updated = "03Jun2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -52,7 +52,8 @@ meta:
   change_log_22May2020 = "added: 2 subject lines, 3 filenames, 8 urls"
   change_log_26May2020 = "added: 1 email address, 3 subject lines, 2 filenames, 5 urls"
   change_log_02Jun2020 = "added: 2 email addresses, 2 subject lines, 5 filenames, 4 urls"
-                                                       
+  change_log_03Jun2020 = "added: 2 subject lines, 5 filenames, 2 urls"
+                                                         
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -496,6 +497,8 @@ strings:
   $url402="http://siitgo.com/u/check.php" nocase
   $url403="http://migration2.godaddysites.com/" nocase
   $url404="http://h2arc.com/wp-includes/ID3/send.php" nocase
+  $url405="http://185.234.217.224/BsQJGbeKKavwjfd.exe" nocase
+  $url406="http://mecharnise.ir/da15/fre.php" nocase
 
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -634,6 +637,11 @@ strings:
   $filename136="Order Datasheet.zip" nocase
   $filename137="Order Datasheet.exe" nocase
   $filename138="GrantForm.html" nocase
+  $filename139="PPE Quotation-june 3.pdf_______________________PPE Quotation-june 3.pdf____64464.gz" nocase
+  $filename140="PPE_QUOT.EXE" nocase
+  $filename141="BsQJGbeKKavwjfd.exe" nocase
+  $filename142="COVID 19 INDIAN PORTS.doc" nocase
+  $filename143="d7635c13758389505acc3470c7c49f3c_AbctfhgXghghgh_.scT" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -748,7 +756,9 @@ strings:
   $subject112="Get your support if you have lost a job" nocase
   $subject113="Important COVID-19 Fund Approval" nocase
   $subject114="Mask-KN95, 3-ply civilian disposable masks and gloves" nocase
-
+  $subject115="REPORT WITH REGARDS TO COVID-19 FOR ALL INDIAN PORTS" nocase
+  $subject116="KN95 mask Invoice and air rate" nocase
+  
   condition:
     any of them
 }
