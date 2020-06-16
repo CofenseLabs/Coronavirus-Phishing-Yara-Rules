@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "42"
-  known_variants_covered = "155"
+  version = "43"
+  known_variants_covered = "162"
   date_created = "17Mar2020"
-  last_updated = "03Jun2020"
+  last_updated = "15Jun2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -53,7 +53,8 @@ meta:
   change_log_26May2020 = "added: 1 email address, 3 subject lines, 2 filenames, 5 urls"
   change_log_02Jun2020 = "added: 2 email addresses, 2 subject lines, 5 filenames, 4 urls"
   change_log_03Jun2020 = "added: 2 subject lines, 5 filenames, 2 urls"
-                                                         
+  change_log_15Jun2020 = "added: 3 email addresses, 10 subject lines, 11 filenames, 4 urls"
+                                                          
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -91,8 +92,11 @@ strings:
   $email29="gamzyyolowo@yandex.com" nocase
   $email30="hmrc@hotmail.com" nocase
   $email31="lucinedauglas@yandex.com" nocase
-  $email132="fran.cess@yandex.com" nocase
-  $email133="webhost@bmdonline.ro" nocase
+  $email32="fran.cess@yandex.com" nocase
+  $email33="webhost@bmdonline.ro" nocase
+  $email34="phyno@plantinships.net" nocase
+  $email35="xyzax@yandex.com" nocase
+  $email36="buch01@detrulp.com" nocase
   
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
@@ -499,6 +503,10 @@ strings:
   $url404="http://h2arc.com/wp-includes/ID3/send.php" nocase
   $url405="http://185.234.217.224/BsQJGbeKKavwjfd.exe" nocase
   $url406="http://mecharnise.ir/da15/fre.php" nocase
+  $url407="https://netorgft6596298-my.sharepoint.com/personal/hr_nhrnn_com/_layouts/15/guestaccess.aspx?guestaccesstoken=H5Q9UqkLwz/OC/o4KuL2R%20X%20EFlI8votABp02PjdP0g=&docid=1_1386c03bcd32049b39427f3dedad81b4c&wdFormId=%7BCA0CF8DD-2D31-4E4D-A177-CCA709E9B435%7D" nocase
+  $url408="https://netorgft6596298-my.sharepoint.com/personal/hr_nhrnn_com/_layouts/15/guestaccess.aspx?guestaccesstoken=8UnH9GdZFFwI44V%20W1sTuSCdLl7r%20xF9gPfLD2Ij%20Us=&docid=1_16ef7f92976fd4a72824dd0723c023dd4&wdFormId=%7BEE7EFF48-2730-4D58-A309-00DD752973C3%7D" nocase
+  $url409="http://ildsabu.com.ng/covid-19%20updates/index.html" nocase
+  $url410="http://ildsabu.com.ng/covid-19%20updates/invalid-remind.html" nocase
 
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -642,6 +650,17 @@ strings:
   $filename141="BsQJGbeKKavwjfd.exe" nocase
   $filename142="COVID 19 INDIAN PORTS.doc" nocase
   $filename143="d7635c13758389505acc3470c7c49f3c_AbctfhgXghghgh_.scT" nocase
+  $filename144="Covid-19防护措施.ppt" nocase
+  $filename145="covid-19防护设备申���表.pot" nocase
+  $filename146="Application-Covid19.jnlp" nocase
+  $filename147="CoVid-19_paycheck_form.jnlp" nocase
+  $filename148="CoVid-19_settlement_application.jnlp" nocase
+  $filename149="Covid_paycheck_application.jnlp" nocase
+  $filename150="SARS-2_Form.jnlp" nocase
+  $filename151="SaRS2_settlement_form.jnlp" nocase
+  $filename152="REQUEST FOR QUOTATION.html" nocase
+  $filename153="Off.Notice_COVID19_96849.doc" nocase
+  $filename154="Order Specification.zip" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -758,6 +777,16 @@ strings:
   $subject114="Mask-KN95, 3-ply civilian disposable masks and gloves" nocase
   $subject115="REPORT WITH REGARDS TO COVID-19 FOR ALL INDIAN PORTS" nocase
   $subject116="KN95 mask Invoice and air rate" nocase
+  $subject117="免費分發covid-19防護設備（台灣衛生部）2020" nocase
+  $subject118="Reopening Guide and Starter Kits (Action Required)" nocase
+  $subject119="coronavirus COVID-19 payment application form" nocase
+  $subject120="Covid Settlement form" nocase
+  $subject121="Coronavirus (Covid-19) Payment form" nocase
+  $subject122="Coronavirus (Covid-19) Payment application form" nocase
+  $subject123="Coronavirus Covid-19 Settlement application form" nocase
+  $subject124="CoVid-19 Payment application form" nocase
+  $subject125="urgent Request for quotation (stay safe from covid-19)" nocase
+  $subject126="Breaking! Treatment for COVID-19 found (Center for disease control)" nocase
   
   condition:
     any of them
