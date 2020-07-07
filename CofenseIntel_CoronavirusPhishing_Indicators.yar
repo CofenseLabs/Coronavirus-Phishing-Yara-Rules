@@ -7,10 +7,10 @@ meta:
   description = "This yara rule consists of major and actionable indicators that Cofense has identified for phishing emails and related malware that are leveraging the CoronaVirus or Covid-19 theme. This data comes from Cofense's Intelligence team, proprietary data collection sources, and the Cofense Phishing Defense Center. This yara rule should be considered a living rule, and will be updated periodically with new and additional indicators as they are identified and validated by the Cofense Intelligence Team."
   
   author = "Cofense Intelligence, Cofense Labs"
-  version = "43"
-  known_variants_covered = "162"
+  version = "44"
+  known_variants_covered = "170"
   date_created = "17Mar2020"
-  last_updated = "15Jun2020"
+  last_updated = "06Jul2020"
   change_log_17Mar2020 = "initial rule creation"
   change_log_19Mar2020 = "added: 4 email addresses, 8 file names, 5 urls, 7 subject lines"
   change_log_20Mar2020 = "added: 7 urls, 4 filenames, 5 subject lines"
@@ -54,7 +54,8 @@ meta:
   change_log_02Jun2020 = "added: 2 email addresses, 2 subject lines, 5 filenames, 4 urls"
   change_log_03Jun2020 = "added: 2 subject lines, 5 filenames, 2 urls"
   change_log_15Jun2020 = "added: 3 email addresses, 10 subject lines, 11 filenames, 4 urls"
-                                                          
+  change_log_06Jul2020 = "added: 3 email addresses, 4 subject lines, 6 filenames, 8 urls"
+                                                                                                                    
 strings:
   $domain1="cornerload.dynu.net" nocase
   $domain2="seasons444.ddns.net" nocase
@@ -97,6 +98,9 @@ strings:
   $email34="phyno@plantinships.net" nocase
   $email35="xyzax@yandex.com" nocase
   $email36="buch01@detrulp.com" nocase
+  $email37="oscar1@zeenatlnc.com" nocase
+  $email38="lata.shinde@onouniforms.com" nocase
+  $email39="coord@liquidetech.com" nocase
   
   $url1="https://site-inspection.com/.well-known/acme-challenge/w.php/9SG2m697HN" nocase
   $url2="http://onlinepreneur.id/manager/brain.exe" nocase
@@ -507,6 +511,14 @@ strings:
   $url408="https://netorgft6596298-my.sharepoint.com/personal/hr_nhrnn_com/_layouts/15/guestaccess.aspx?guestaccesstoken=8UnH9GdZFFwI44V%20W1sTuSCdLl7r%20xF9gPfLD2Ij%20Us=&docid=1_16ef7f92976fd4a72824dd0723c023dd4&wdFormId=%7BEE7EFF48-2730-4D58-A309-00DD752973C3%7D" nocase
   $url409="http://ildsabu.com.ng/covid-19%20updates/index.html" nocase
   $url410="http://ildsabu.com.ng/covid-19%20updates/invalid-remind.html" nocase
+  $url411="http://biz9holdings.com/INVOICE/COVID19.exe" nocase
+  $url411="https://wellnesslifezone.com/make/webpanel/inc/3d4339bf4fe6c7.php" nocase
+  $url411="http://biz9holdings.com/INVOICE/qL8UUmCOsyT01sL.exe" nocase
+  $url411="http://jaybro.design/pdf_tax/index.php" nocase
+  $url411="https://tougaloocollege-my.sharepoint.com/personal/mjmoore_tougaloo_edu/_layouts/15/onedrive.aspx" nocase
+  $url411="https://paymentcovid-19.000webhostapp.com/review/elitepage2/" nocase
+  $url411="http://papereggplantr.com/dwqwqfwer453ttrt" nocase
+  $url411="https://digitaldeepak.website/.skat/" nocase
 
   $filename1="CoVid19_BAH.PDF.tar" nocase
   $filename2="CORONA TREATMENT.doc" nocase
@@ -661,6 +673,12 @@ strings:
   $filename152="REQUEST FOR QUOTATION.html" nocase
   $filename153="Off.Notice_COVID19_96849.doc" nocase
   $filename154="Order Specification.zip" nocase
+  $filename155="CBJ200620039539.xlsx" nocase
+  $filename156="payment invoice.exe" nocase
+  $filename157="scan007.exe" nocase
+  $filename158="IMAGE_20.EXE" nocase
+  $filename159="COVID-19 protein and antibody.xlsx" nocase
+  $filename160="LIST OF BANNED GOODS pdf.html" nocase
   
   $subject1="[Newsletter] Coronavirus (COVID-19) new cases confirmed in your city" nocase
   $subject2="[Newsletter] Coronavirus: Important update" nocase
@@ -787,6 +805,10 @@ strings:
   $subject124="CoVid-19 Payment application form" nocase
   $subject125="urgent Request for quotation (stay safe from covid-19)" nocase
   $subject126="Breaking! Treatment for COVID-19 found (Center for disease control)" nocase
+  $subject127="Person is inviting you to collaborate on Paymentcovid-19" nocase
+  $subject128="Payment Assistance Due To Covid-19 Pandemic" nocase
+  $subject129="URGENT ORDER (COVID 19 RUSH HOUR.)" nocase
+  $subject130="BANNED GOODS DUE TO COVID 19 PANDEMIC" nocase
   
   condition:
     any of them
